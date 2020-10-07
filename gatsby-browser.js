@@ -17,7 +17,6 @@ const Provider = ({ element }) => {
 		<ThemeProvider theme={themeMode}>
 			<GlobalStyle />
 			<ThemeButton theme={theme} toggleTheme={toggleTheme} />
-			<h1>It's a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
 			{element}
 		</ThemeProvider>
 	)

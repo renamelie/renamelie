@@ -2,7 +2,6 @@ import React from 'react'
 
 const IconMoon = () => (
 	<svg
-		id="Layer_1"
 		enableBackground="new 0 0 497 497"
 		height="512"
 		viewBox="0 0 497 497"

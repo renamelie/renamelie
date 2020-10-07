@@ -5,20 +5,22 @@ import styled from 'styled-components'
 import { Icon } from '@components/icons'
 
 const ToggleContainer = styled.button`
-	color: ${({ theme }) => theme.svgColor};
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	right: 0;
 	background: ${({ theme }) => theme.gradient};
-	border: 2px solid ${({ theme }) => theme.toggleBorder};
+	border: transparent;
+	/* border: 2px solid ${({ theme }) => theme.toggleBorder}; */
 	border-radius: 30px;
 	cursor: pointer;
-	display: flex;
 	font-size: 0.5rem;
-	justify-content: space-between;
-	margin: 0 auto;
+	margin: 5rem 1rem 0;
 	overflow: hidden;
 	padding: 0.5rem;
-	position: relative;
-	width: 8rem;
-	height: 4rem;
+	width: 4rem;
+	height: 2rem;
 
 	svg {
 		height: auto;

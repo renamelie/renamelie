@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --brand-cyan: #43a699;
     --brand-main-light: #88bec8;
     --brand-light: #e7eef4;
+    --brand-dark: #1d2224;
     --brand-grey: #4e5d63;
     --brand-grey-light: #70858e;
     --brand-grey-dimmed: #97abb3;
@@ -34,8 +35,7 @@ const GlobalStyle = createGlobalStyle`
     --font-size-h6: var(--font-size-base);
     --line-height: 1.6;
     --line-height-small: 1.1428571429;
-    --font-family-base: 'ff-tisa-sans-web-pro', 'Trebuchet MS', 'Helvetica Neue',
-      'Helvetica', 'Arial', 'sans-serif';
+    --font-family-base: 'Helvetica Neue', 'ff-tisa-sans-web-pro', 'Trebuchet MS', 'Helvetica', 'Arial', 'sans-serif';
     --font-weight-base: 400;
     --font-weight-bold: 700;
     --font-family-monospace: 'Menlo', 'Monaco', 'Consolas', 'Courier New',
@@ -44,6 +44,10 @@ const GlobalStyle = createGlobalStyle`
       'Helvetica', 'Arial', 'sans-serif';
     --font-weight-headings: 400;
     --line-height-headings: 1.1;
+
+      /* Components spacing */
+    --spacer: 1.5rem;
+    --border-radius: 0.25rem;
   }
 
   *,
@@ -75,14 +79,21 @@ body {
   min-height: 100vh;
   /* color: var(--text-color);
   background: var(--box-background-color); */
-  color: ${({ theme }) => theme.frontColor};
+  color: ${({ theme }) => theme.textColor};
   background: ${({ theme }) => theme.backgroundColor};
   transition: background 0.2s var(--easing);
+}
+
+button {
+  font-family: var(--font-family-base);
+  outline: none;
 }
 
 p,
 ul,
 ol {
+  padding: 0;
+  margin: 0;
   margin: 0 0 var(--spacer);
 }
 
@@ -120,7 +131,7 @@ h5,
 h6 {
   font-family: var(--font-family-headings);
   line-height: var(--line-height-headings);
-  color: var(--color-headings);
+  color: ${({ theme }) => theme.titleColor};
   font-weight: var(--font-weight-headings);
   margin: 0 0 var(--spacer);
 }

@@ -2,19 +2,19 @@ module.exports = {
 	navLinks: [
 		{
 			name: 'About',
-			url: '/#about',
+			id: '#about',
 		},
 		{
 			name: 'Services',
-			url: '/#services',
+			id: '#services',
 		},
 		{
 			name: 'Portfolio',
-			url: '/#portfolio',
+			id: '#portfolio',
 		},
 		{
 			name: 'Contact',
-			url: '/#contact',
+			id: '#contact',
 		},
 	],
 }

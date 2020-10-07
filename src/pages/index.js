@@ -1,16 +1,19 @@
 import React from 'react'
-import { SEO, Layout, Image } from '@components'
+import styled from 'styled-components'
+import { SEO, Layout, About, Services, Portfolio, Contact } from '@components'
 
-const IndexPage = () => (
-	<Layout>
+const IndexPage = ({ className }) => (
+	<Layout className={className}>
 		<SEO title="Home" />
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
-		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-			<Image />
-		</div>
+		<About />
+		<Services />
+		<Portfolio />
+		<Contact />
 	</Layout>
 )
 
-export default IndexPage
+export default styled(IndexPage)`
+	/* & > * {
+		padding-top: 4em;
+	} */
+`

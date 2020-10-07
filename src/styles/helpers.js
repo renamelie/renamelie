@@ -1,26 +1,14 @@
 import { css } from 'styled-components'
 
 export const colors = {
-	primary: '#eee8aa', // yellow
-	primaryPlus: 'rgb(245, 245, 151)',
-	accent: '#b5adde',
-	accentPlus: '#6C63FF',
-	white: '#f3ebe8',
-	black: '#1f1f1f',
-	lightGrey: '#e7eef4',
-	grey: '#4e5d63',
-	lightPink: '#c8aab3',
-	darkPink: '#887486',
-	darkIcon: 'rgba(87, 87, 87, 0.2)',
-	lightIcon: 'rgba(87, 87, 87, 0.4)',
-
-	// --brand-main: #015565;
-	// --brand-cyan: #43a699;
-	// --brand-main-light: #88bec8;
-	// --brand-light: #e7eef4;
-	// --brand-grey: #4e5d63;
-	// --brand-grey-light: #70858e;
-	// --brand-grey-dimmed: #97abb3;
+	brandMain: '#015565',
+	brandCyan: '#43a699',
+	brandMainLight: '#88bec8',
+	brandLight: '#e7eef4',
+	brandDark: '#1d2224',
+	brandGrey: '#4e5d63',
+	brandGreyLight: '#70858e',
+	brandGreyDimmed: '#97abb3',
 }
 
 export const pxToRem = (px = 16) => {

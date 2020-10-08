@@ -13,17 +13,15 @@ const StyledContent = styled.div`
 const Layout = ({ className, children }) => {
 	return (
 		<div id="root">
-			{isHome && (
-				<StyledContent>
-					<Header />
-					<Social />
-					<Email />
-					<div>
-						<main className={className}>{children}</main>
-					</div>
-					<Footer />
-				</StyledContent>
-			)}
+			<StyledContent>
+				<Header />
+				<Social />
+				<Email />
+				<div>
+					<main className={className}>{children}</main>
+				</div>
+				<Footer />
+			</StyledContent>
 		</div>
 	)
 }

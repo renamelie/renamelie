@@ -12,5 +12,8 @@ const Contact = ({ className }) => {
 
 export default styled(Contact)`
 	border: 2px solid purple;
-	height: calc(100vh - 4rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `

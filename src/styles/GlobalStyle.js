@@ -144,7 +144,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #5ebeb1;
+  color: ${({ theme }) => theme.accentColor};
 }
 
 /* Media */

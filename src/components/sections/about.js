@@ -40,7 +40,6 @@ export default styled(About)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: calc(100vh - 4rem);
 
 	& .profile {
 		display: flex;
@@ -48,12 +47,6 @@ export default styled(About)`
 		justify-content: center;
 		align-items: center;
 	}
-
-	${media.small`
-		& .profile {
-			flex-direction: row;
-		}
-	`}
 
 	& h1 {
 		font-size: var(--font-size-h3);
@@ -63,7 +56,7 @@ export default styled(About)`
 
 	& p {
 		font-family: var(--font-family-base);
-		font-size: var(--font-size-h4);
+		font-size: var(--font-size-base);
 		color: var(--text-color);
 	}
 
@@ -76,4 +69,14 @@ export default styled(About)`
 		content: ' }';
 		opacity: 0.4;
 	}
+
+	${media.small`
+		& .profile {
+			flex-direction: row;
+		}
+
+		& p {
+			font-size: var(--font-size-h4);
+		}
+	`}
 `

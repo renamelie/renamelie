@@ -3,8 +3,14 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 
-import { media } from '@styles'
-import { Fade } from 'react-reveal'
+import { media, fadeTop } from '@styles'
+
+const FadeStyle = styled.div`
+	animation-name: ${fadeTop};
+	animation-delay: 200ms;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+`
 
 const About = ({ className }) => {
 	const data = useStaticQuery(graphql`
@@ -24,12 +30,12 @@ const About = ({ className }) => {
 	return (
 		<Element name="#about">
 			<div className={className}>
-				<Fade top delay={200} duration={2000}>
+				<FadeStyle>
 					<div className="profile">
 						<h1>{db.name}</h1>
 						<p>{db.label}</p>
 					</div>
-				</Fade>
+				</FadeStyle>
 				{/* <p>
 					I'm a software engineer based in Paris, I build exceptional websites,
 					applications in React, Gatsby ..

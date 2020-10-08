@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import TransitionStyles from './TransitionStyles'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -157,7 +156,6 @@ svg {
   margin: 0;
 }
 
-${TransitionStyles};
 
 `
 

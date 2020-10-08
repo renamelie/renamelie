@@ -49,7 +49,7 @@ export default styled(About)`
 	}
 
 	& h1 {
-		font-size: var(--font-size-h3);
+		font-size: var(--font-size-h4);
 		margin-right: calc(var(--spacer) / 4);
 		line-height: var(--line-height);
 	}
@@ -73,6 +73,10 @@ export default styled(About)`
 	${media.small`
 		& .profile {
 			flex-direction: row;
+		}
+
+		& h1 {
+			font-size: var(--font-size-h3);
 		}
 
 		& p {

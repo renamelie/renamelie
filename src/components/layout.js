@@ -4,16 +4,28 @@ import styled from 'styled-components'
 
 import { Header, Footer, Social, Email } from '@components'
 
-const Layout = ({ className, children }) => {
+const StyledContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+`
+
+const Layout = ({ className, location, children }) => {
+	const isHome = location.pathname === '/'
+
 	return (
 		<div id="root">
-			<Header />
-			<Social />
-			<Email />
-			<div>
-				<main className={className}>{children}</main>
-			</div>
-			<Footer />
+			{isHome && (
+				<StyledContent>
+					<Header isHome={isHome} />
+					<Social isHome={isHome} />
+					<Email isHome={isHome} />
+					<div>
+						<main className={className}>{children}</main>
+					</div>
+					<Footer />
+				</StyledContent>
+			)}
 		</div>
 	)
 }

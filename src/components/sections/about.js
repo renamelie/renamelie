@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
-import { media } from '@styles'
 import { Element } from 'react-scroll'
+
+import { media } from '@styles'
+import { Fade } from 'react-reveal'
 
 const About = ({ className }) => {
 	const data = useStaticQuery(graphql`
@@ -22,10 +24,12 @@ const About = ({ className }) => {
 	return (
 		<Element name="#about">
 			<div className={className}>
-				<div className="profile">
-					<h1>{db.name}</h1>
-					<p>{db.label}</p>
-				</div>
+				<Fade top delay={500} duration={2000}>
+					<div className="profile">
+						<h1>{db.name}</h1>
+						<p>{db.label}</p>
+					</div>
+				</Fade>
 				{/* <p>
 					I'm a software engineer based in Paris, I build exceptional websites,
 					applications in React, Gatsby ..

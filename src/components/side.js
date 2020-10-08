@@ -1,12 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import styled from 'styled-components'
 import { media } from '@styles'
+import { Fade } from 'react-reveal'
 
 const Side = ({ className, children, orientation }) => {
 	return (
 		<div className={className} orientation={orientation}>
-			{children}
+			{orientation === 'left' ? (
+				<Fade left delay={500} duration={2000}>
+					{children}
+				</Fade>
+			) : (
+				<Fade right delay={500} duration={2000}>
+					{children}
+				</Fade>
+			)}
 		</div>
 	)
 }

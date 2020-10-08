@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import { Side } from '@components'
 import { socialMedia } from '@config'
 
-const Social = ({ className }) => {
+const Social = ({ className, isHome }) => {
 	return (
-		<Side orientation="left">
+		<Side isHome={isHome} orientation="left">
 			<ul className={className}>
 				{socialMedia &&
 					socialMedia.map(({ url, name, icon }, i) => (
@@ -47,6 +47,7 @@ export default styled(Social)`
 				color: ${({ theme }) => theme.textColor};
 				width: 20px;
 				height: 20px;
+				transition: 0.2s ease-out;
 			}
 
 			svg:hover,

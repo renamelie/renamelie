@@ -3,7 +3,8 @@ import { colors } from '@styles'
 export const lightTheme = {
 	backgroundColor: colors.brandLight,
 	textColor: colors.brandGrey,
-	titleColor: colors.brandMain,
+	titleColor: colors.brandMainLight,
+	accentColor: colors.brandMainLight,
 
 	// Toggle Button
 	toggleBorder: '#fff',
@@ -13,7 +14,8 @@ export const lightTheme = {
 export const darkTheme = {
 	backgroundColor: colors.brandDark,
 	textColor: '#7e9199',
-	titleColor: colors.brandMainLight,
+	titleColor: colors.pink,
+	accentColor: colors.pink,
 
 	// Toggle Button
 	toggleBorder: '#6B8096',

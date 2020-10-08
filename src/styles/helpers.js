@@ -9,6 +9,8 @@ export const colors = {
 	brandGrey: '#4e5d63',
 	brandGreyLight: '#70858e',
 	brandGreyDimmed: '#97abb3',
+	dark: '#121516',
+	pink: 'pink',
 }
 
 export const pxToRem = (px = 16) => {

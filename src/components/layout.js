@@ -21,6 +21,7 @@ Layout.propTypes = {
 }
 
 export default styled(Layout)`
+	margin: 0 4rem;
 	& > * {
 		padding-top: 4rem;
 	}

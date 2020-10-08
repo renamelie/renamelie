@@ -94,7 +94,6 @@ ul,
 ol {
   padding: 0;
   margin: 0;
-  margin: 0 0 var(--spacer);
 }
 
 /* Headings */
@@ -133,7 +132,7 @@ h6 {
   line-height: var(--line-height-headings);
   color: ${({ theme }) => theme.titleColor};
   font-weight: var(--font-weight-headings);
-  margin: 0 0 var(--spacer);
+  margin: 0;
 }
 
 /* Links */

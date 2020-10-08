@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
+import { media } from '@styles'
+import { Element } from 'react-scroll'
 
 const About = ({ className }) => {
 	const data = useStaticQuery(graphql`
@@ -18,18 +20,40 @@ const About = ({ className }) => {
 	const db = data.site.siteMetadata
 
 	return (
-		<div id="about" className={className}>
-			<h1>{db.name}</h1>
-			<p>{db.label}</p>
-		</div>
+		<Element name="#about">
+			<div className={className}>
+				<div className="profile">
+					<h1>{db.name}</h1>
+					<p>{db.label}</p>
+				</div>
+				{/* <p>
+					I'm a software engineer based in Paris, I build exceptional websites,
+					applications in React, Gatsby ..
+				</p> */}
+			</div>
+		</Element>
 	)
 }
 
 export default styled(About)`
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: calc(100vh - 4rem);
+
+	& .profile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	${media.small`
+		& .profile {
+			flex-direction: row;
+		}
+	`}
 
 	& h1 {
 		font-size: var(--font-size-h3);
@@ -43,12 +67,12 @@ export default styled(About)`
 		color: var(--text-color);
 	}
 
-	& p:before {
+	& .profile p:before {
 		content: '{ ';
 		opacity: 0.4;
 	}
 
-	& p:after {
+	& .profile p:after {
 		content: ' }';
 		opacity: 0.4;
 	}

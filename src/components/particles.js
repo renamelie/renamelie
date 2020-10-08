@@ -2,7 +2,7 @@ import React from 'react'
 import Particles from 'react-particles-js'
 import Styled from 'styled-components'
 
-const Particles = ({ className, theme }) => {
+const Particules = ({ className, theme }) => {
 	return (
 		<Particles
 			className={className}
@@ -62,7 +62,8 @@ const Particles = ({ className, theme }) => {
 	)
 }
 
-export default Styled(Particles)`
+export default Styled(Particules)`
+border: 2px solid red;
   position: absolute;
 	top: 0;
 	left: 0;

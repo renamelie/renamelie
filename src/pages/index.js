@@ -13,7 +13,6 @@ const IndexPage = ({ className }) => (
 )
 
 export default styled(IndexPage)`
-	border: 2px solid red;
 	& > * > * {
 		height: calc(100vh - 4rem);
 	}

@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Header, Footer, Social, Email } from '@components'
+import { Header, Footer, Social, Email, Particles } from '@components'
 
 const Layout = ({ className, children }) => {
 	return (
 		<div id="root">
+			<Particles />
 			<Header />
 			<Social />
 			<Email />
@@ -23,7 +24,7 @@ Layout.propTypes = {
 }
 
 export default styled(Layout)`
-	margin: 0 6vw;
+	padding: 0 6vw;
 	& > * {
 		padding-top: 4rem;
 	}

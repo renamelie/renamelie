@@ -24,7 +24,7 @@ const About = ({ className }) => {
 	return (
 		<Element name="#about">
 			<div className={className}>
-				<Fade top delay={500} duration={2000}>
+				<Fade top delay={200} duration={2000}>
 					<div className="profile">
 						<h1>{db.name}</h1>
 						<p>{db.label}</p>

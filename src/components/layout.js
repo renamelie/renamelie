@@ -10,16 +10,14 @@ const StyledContent = styled.div`
 	min-height: 100vh;
 `
 
-const Layout = ({ className, location, children }) => {
-	const isHome = location.pathname === '/'
-
+const Layout = ({ className, children }) => {
 	return (
 		<div id="root">
 			{isHome && (
 				<StyledContent>
-					<Header isHome={isHome} />
-					<Social isHome={isHome} />
-					<Email isHome={isHome} />
+					<Header />
+					<Social />
+					<Email />
 					<div>
 						<main className={className}>{children}</main>
 					</div>

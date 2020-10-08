@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import { Side } from '@components'
 import { socialMedia } from '@config'
 
-const Social = ({ className, isHome }) => {
+const Social = ({ className }) => {
 	return (
-		<Side isHome={isHome} orientation="left">
+		<Side orientation="left">
 			<ul className={className}>
 				{socialMedia &&
 					socialMedia.map(({ url, name, icon }, i) => (

@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import { Side } from '@components'
 import { email } from '@config'
 
-const Email = ({ className, isHome }) => {
+const Email = ({ className }) => {
 	return (
-		<Side isHome={isHome} orientation="right">
+		<Side orientation="right">
 			<div className={className}>
 				<a href={`mailto:${email}`}>{email}</a>
 			</div>

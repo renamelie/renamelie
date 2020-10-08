@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Header, Footer, Social, Email, Particles } from '@components'
+import { Header, Footer, Social, Email } from '@components'
 
 const Layout = ({ className, children }) => {
 	return (
 		<div id="root">
-			<Particles />
 			<Header />
 			<Social />
 			<Email />

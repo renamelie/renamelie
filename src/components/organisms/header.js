@@ -91,6 +91,7 @@ export default styled(Header)`
 		border: 1px solid ${({ theme }) => theme.accentColor};
 		border-radius: 5px;
 		padding: 0.5rem 1rem;
+		cursor: pointer;
 	}
 
 	& .resume span a {

@@ -6,6 +6,7 @@ export const lightTheme = {
 	textColor: colors.brandGrey,
 	titleColor: colors.brandMainLight,
 	accentColor: colors.brandMainLight,
+	accentLightColor: colors.brandMainLighter,
 
 	// Toggle Button
 	toggleBorder: '#fff',
@@ -21,6 +22,7 @@ export const darkTheme = {
 	textColor: '#7e9199',
 	titleColor: colors.pink,
 	accentColor: colors.pink,
+	accentLightColor: colors.pinkDarker,
 
 	// Toggle Button
 	toggleBorder: '#6B8096',

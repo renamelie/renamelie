@@ -11,8 +11,22 @@ const Contact = ({ className }) => {
 		<Element name="#contact">
 			<div className={className}>
 				<Title span="C" text="ontact" />
-				<div className="avatar">
-					<div className="imgMe"></div>
+				<div className="content">
+					<div className="imgMe" data-tip="Hi !" data-for="1"></div>
+					<ReactTooltip id="1" className="tooltip" />
+
+					{/* <h2>Amélie Ren</h2> */}
+					<div className="resume">
+						<span>
+							<a
+								href="mailto: ren.amelie@gmail.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Get in touch
+							</a>
+						</span>
+					</div>
 				</div>
 			</div>
 		</Element>
@@ -20,12 +34,16 @@ const Contact = ({ className }) => {
 }
 
 export default styled(Contact)`
-	border: 2px solid purple;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
 	min-height: calc(100vh - 4rem);
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 70vh;
+	}
 
 	.imgMe {
 		width: 200px;
@@ -40,5 +58,31 @@ export default styled(Contact)`
 	.imgMe:hover {
 		background: url(${({ theme }) => theme.activeImg}) no-repeat;
 		background-size: contain;
+	}
+
+	.tooltip {
+		color: ${({ theme }) => theme.accentColor};
+	}
+
+	/* & .resume {
+		justify-content: center;
+		align-items: center;
+	} */
+
+	& .resume span {
+		border: 1px solid ${({ theme }) => theme.accentColor};
+		border-radius: 5px;
+		padding: 1rem;
+		cursor: pointer;
+		transition: 600ms;
+	}
+
+	& .resume span:hover {
+		background-color: ${({ theme }) => theme.accentLightColor};
+	}
+
+	& .resume span a {
+		font-size: 16px;
+		color: ${({ theme }) => theme.accentColor};
 	}
 `

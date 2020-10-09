@@ -6,9 +6,9 @@ const IndexPage = ({ className, location }) => {
 	return (
 		<Layout className={className} location={location}>
 			<SEO title="Home" />
-			{/* <About />
+			<About />
 			<Services />
-			<Portfolio /> */}
+			<Portfolio />
 			<Contact />
 		</Layout>
 	)

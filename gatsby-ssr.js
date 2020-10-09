@@ -2,7 +2,8 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from './src/styles/GlobalStyle'
-import { ThemeButton, lightTheme, darkTheme, useDarkMode } from '@styles'
+import { lightTheme, darkTheme } from '@styles'
+import { ThemeButton, useDarkMode } from '@components'
 
 const Provider = ({ element }) => {
 	const [theme, toggleTheme, componentMounted] = useDarkMode()

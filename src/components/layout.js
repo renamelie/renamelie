@@ -31,7 +31,7 @@ Layout.propTypes = {
 }
 
 export default styled(Layout)`
-	padding: 0 6vw;
+	padding: 0 7vw;
 	& > * {
 		padding-top: 4rem;
 	}

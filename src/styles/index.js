@@ -1,6 +1,4 @@
 export { default as GlobalStyle } from './GlobalStyle'
 export { colors, pxToRem, media } from './helpers'
-export { default as ThemeButton } from './ThemeButton'
 export { lightTheme, darkTheme } from './themes'
-export { useDarkMode } from './useDarkMode'
-export { fadeTop, fadeLeft, fadeRight } from './keyframes'
+export { fadeTop, fadeBottom, fadeLeft, fadeRight } from './keyframes'

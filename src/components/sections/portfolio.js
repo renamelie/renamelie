@@ -16,4 +16,5 @@ export default styled(Portfolio)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	min-height: calc(100vh - 4rem);
 `

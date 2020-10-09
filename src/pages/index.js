@@ -6,16 +6,12 @@ const IndexPage = ({ className, location }) => {
 	return (
 		<Layout className={className} location={location}>
 			<SEO title="Home" />
-			<About />
+			{/* <About />
 			<Services />
-			<Portfolio />
+			<Portfolio /> */}
 			<Contact />
 		</Layout>
 	)
 }
 
-export default styled(IndexPage)`
-	& > * > * {
-		height: calc(100vh - 4rem);
-	}
-`
+export default styled(IndexPage)``

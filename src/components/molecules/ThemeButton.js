@@ -2,7 +2,7 @@ import React from 'react'
 import { func, string } from 'prop-types'
 import styled from 'styled-components'
 
-import { Icon } from '@components/icons'
+import { Icon } from '@components'
 
 const ToggleContainer = styled.button`
 	position: fixed;

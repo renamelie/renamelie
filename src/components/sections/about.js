@@ -50,6 +50,7 @@ export default styled(About)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	min-height: calc(100vh - 4rem);
 
 	& .profile {
 		display: flex;

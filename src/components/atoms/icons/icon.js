@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { IconMoon, IconSun, IconExternal } from '@components/icons'
+import { IconMoon, IconSun, IconExternal } from '@components/atoms/icons'
 
 const Icon = ({ name }) => {
 	switch (name) {

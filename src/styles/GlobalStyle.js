@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     --brand-grey: #4e5d63;
     --brand-grey-light: #70858e;
     --brand-grey-dimmed: #97abb3;
+    --dark: #121516;
+    --pink: pink;
 
     /* Backgrounds */
     --body-background-color: var(--brand-light);
@@ -77,8 +79,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  /* color: var(--text-color);
-  background: var(--box-background-color); */
   color: ${({ theme }) => theme.textColor};
   background: ${({ theme }) => theme.backgroundColor};
   transition: background 0.2s var(--easing);

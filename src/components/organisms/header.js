@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 
@@ -58,14 +57,6 @@ const Header = ({ className }) => {
 			</div>
 		</header>
 	)
-}
-
-Header.propTypes = {
-	siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-	siteTitle: ``,
 }
 
 export default styled(Header)`

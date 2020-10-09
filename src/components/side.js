@@ -33,7 +33,7 @@ export default styled(Side)`
 	bottom: 0;
 	left: ${props => (props.orientation === 'left' ? '20px' : 'auto')};
 	right: ${props => (props.orientation === 'left' ? 'auto' : '20px')};
-	z-index: 10;
+	z-index: 11;
 
 	${media.medium`
     display: block;

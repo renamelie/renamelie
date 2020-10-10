@@ -5,7 +5,7 @@ import { SEO, Layout, About, Services, Portfolio, Contact } from '@components'
 const IndexPage = ({ className, location }) => {
 	return (
 		<Layout className={className} location={location}>
-			<SEO title="Home" />
+			<SEO />
 			<About />
 			<Services />
 			<Portfolio />

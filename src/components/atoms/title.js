@@ -1,22 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import { fadeBottom } from '@styles'
+import { Fade } from 'react-reveal'
+// import { fadeBottom } from '@styles'
 
-const FadeStyle = styled.div`
-	animation-name: ${fadeBottom};
-	animation-delay: 1s;
-	animation-timing-function: linear;
-	animation-duration: 2s;
-`
+// const FadeStyle = styled.div`
+// 	animation-name: ${fadeBottom};
+// 	animation-delay: 1s;
+// 	animation-timing-function: linear;
+// 	animation-duration: 2s;
+// `
 
 const Title = ({ className, span, text }) => {
 	return (
-		<FadeStyle>
+		<Fade bottom duration={2000} delay={200}>
 			<h1 className={`${className}`}>
 				<span>{span}</span>
 				{text}
 			</h1>
-		</FadeStyle>
+		</Fade>
 	)
 }
 

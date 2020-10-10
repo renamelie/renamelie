@@ -1,6 +1,7 @@
 import React from 'react'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
+import { Fade } from 'react-reveal'
 
 import { itemServices } from '@config'
 import { media } from '@styles'
@@ -11,11 +12,19 @@ const Services = ({ className }) => {
 		<Element name="#services">
 			<div className={className}>
 				<Title span="S" text="ervices" />
-				<ul className="listServices">
+				<div className="listServices">
 					{itemServices.map(({ icon, title, text }, i) => (
-						<Item key={i} icon={icon} title={title} text={text} />
+						<Fade
+							left={i % 2 === 0 ? true : false}
+							right={i % 2 !== 0 ? true : false}
+							key={i}
+							duration={2000}
+							delay={1000}
+						>
+							<Item icon={icon} title={title} text={text} />
+						</Fade>
 					))}
-				</ul>
+				</div>
 			</div>
 		</Element>
 	)
@@ -40,6 +49,14 @@ export default styled(Services)`
 	${media.medium`
 		.listServices {
 			grid-template-columns: 1fr 1fr;
+		}
+
+		.listServices > div:nth-child(odd) .styledSpan {
+			order: 2;
+		}
+
+		.listServices > div:nth-child(odd) .styledText > * {
+			text-align: right;
 		}
 	`}
 `

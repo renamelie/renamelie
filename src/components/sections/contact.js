@@ -12,7 +12,7 @@ const Contact = ({ className }) => {
 			<div className={className}>
 				<Title span="C" text="ontact" />
 				<div className="content">
-					<div className="imgMe" data-tip="Hi !" data-for="1"></div>
+					<div className="imgMe" data-tip="Salut !" data-for="1"></div>
 					<ReactTooltip id="1" className="tooltip" />
 
 					{/* <h2>Amélie Ren</h2> */}
@@ -23,7 +23,7 @@ const Contact = ({ className }) => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Get in touch
+								Me contacter
 							</a>
 						</span>
 					</div>
@@ -34,10 +34,13 @@ const Contact = ({ className }) => {
 }
 
 export default styled(Contact)`
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	min-height: calc(100vh - 4rem);
 
-	.content {
+	& .content {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;

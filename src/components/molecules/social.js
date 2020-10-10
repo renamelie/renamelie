@@ -11,7 +11,7 @@ const Social = ({ className }) => {
 				{socialMedia &&
 					socialMedia.map(({ url, name, icon }, i) => (
 						<li key={i}>
-							<a href={url} aria-label={name}>
+							<a href={url} aria-label={name} target="_blank" rel="noreferrer">
 								{icon}
 							</a>
 						</li>

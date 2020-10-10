@@ -8,6 +8,7 @@ const StyledItem = styled.div`
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 2rem 0 2rem 0;
+	min-height: 90px;
 
 	& > * {
 		display: flex;
@@ -23,6 +24,7 @@ const StyledItem = styled.div`
 	.styledText {
 		flex: 4;
 		display: flex;
+		justify-content: flex-start;
 		flex-direction: column;
 		margin-right: 0.5rem;
 	}
@@ -64,7 +66,7 @@ const StyledItem = styled.div`
 		line-height: 1.5rem;
 	}
 
-	${media.medium`
+	/* ${media.medium`
 		&:nth-child(odd) .styledSpan {
 			order: 2;
 		}
@@ -72,7 +74,7 @@ const StyledItem = styled.div`
 		&:nth-child(odd) .styledText > * {
 			text-align: right;
 		}
-	`}
+	`} */
 `
 
 const ItemServices = ({ icon, title, text }) => {

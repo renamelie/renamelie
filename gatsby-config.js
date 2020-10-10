@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
 	siteMetadata: {
-		title: `renamelie`,
+		title: `Ren Amélie`,
 		name: `ren amelie`,
 		label: 'developer & freelance',
 		description: `Hello, Amélie, developer & freelance, nice to meet you.`,
@@ -35,7 +35,7 @@ module.exports = {
 				background_color: `#663399`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				icon: `src/images/code.png`, // This path is relative to the root of the site.
 			},
 		},
 		`gatsby-plugin-styled-components`,

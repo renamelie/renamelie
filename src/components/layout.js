@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { Header, Footer, Social, Email } from '@components'
+import { media } from '@styles'
 
 const StyledContent = styled.div`
 	display: flex;
@@ -31,8 +32,15 @@ Layout.propTypes = {
 }
 
 export default styled(Layout)`
-	padding: 0 7vw;
+	padding: 0 2vw;
+
 	& > * {
 		padding-top: 4rem;
 	}
+
+	${media.medium`
+		& {
+			padding: 0 9vw;
+		}
+	`}
 `

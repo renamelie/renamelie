@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled from 'styled-components'
-import { media, fadeLeft, fadeRight } from '@styles'
-
-const FadeStyle = styled.div`
-	animation-name: ${props =>
-		props.direction === 'left' ? fadeLeft : fadeRight};
-	animation-delay: 1s;
-	animation-timing-function: linear;
-	animation-duration: 2s;
-`
+import { media } from '@styles'
+import { Fade } from 'react-reveal'
 
 const Side = ({ className, children, orientation }) => {
 	return (
 		<div className={className} orientation={orientation}>
-			<FadeStyle direction={orientation}>{children}</FadeStyle>
+			<Fade
+				left={orientation === 'left' ? true : false}
+				right={orientation === 'right' ? true : false}
+				delay={1000}
+				duration={2000}
+			>
+				{children}
+			</Fade>
 		</div>
 	)
 }

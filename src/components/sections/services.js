@@ -46,7 +46,7 @@ export default styled(Services)`
 		min-height: 70vh;
 	}
 
-	${media.medium`
+	${media.bigMedium`
 		.listServices {
 			grid-template-columns: 1fr 1fr;
 		}

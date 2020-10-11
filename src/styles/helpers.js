@@ -21,7 +21,7 @@ export const pxToRem = (px = 16) => {
 
 const sizes = {
 	large: 1200,
-	bigMedium: 1000,
+	bigMedium: 970,
 	medium: 800,
 	small: 600,
 	smaller: 321,

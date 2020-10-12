@@ -15,9 +15,10 @@ const Portfolio = ({ className }) => {
 }
 
 export default styled(Portfolio)`
+	border: 2px solid purple;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	min-height: calc(100vh - 4rem);
 

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 import { Fade } from 'react-reveal'
+import { FaEnvelope } from 'react-icons/fa'
 
 import { media } from '@styles'
 
@@ -30,10 +31,21 @@ const About = ({ className }) => {
 						<p>{db.label}</p>
 					</div>
 				</Fade>
-				<p>
+				<Fade bottom delay={200} duration={2000}>
+					<span className="contact">
+						<a
+							href="mailto: ren.amelie@gmail.com"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<FaEnvelope />
+						</a>
+					</span>
+				</Fade>
+				{/* <p>
 					I'm a software engineer based in Paris, I build exceptional websites,
 					applications in React, Gatsby ..
-				</p>
+				</p> */}
 			</div>
 		</Element>
 	)
@@ -51,6 +63,25 @@ export default styled(About)`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	& .contact {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem;
+		width: 50px;
+		height: 50px;
+	}
+
+	& .contact svg {
+		cursor: pointer;
+		height: 40px;
+		width: 40px;
+	}
+
+	& .contact svg:hover {
+		color: ${({ theme }) => theme.accentColor};
 	}
 
 	& h1 {

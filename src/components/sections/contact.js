@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 import ReactTooltip from 'react-tooltip'
+import { Fade } from 'react-reveal'
 
 import { Title } from '@components'
 import { pxToRem } from '@styles'
@@ -11,23 +12,26 @@ const Contact = ({ className }) => {
 		<Element name="#contact">
 			<div className={className}>
 				<Title span="C" text="ontact" />
-				<div className="content">
-					<div className="imgMe" data-tip="Salut !" data-for="1"></div>
-					<ReactTooltip id="1" className="tooltip" />
-
-					{/* <h2>Amélie Ren</h2> */}
-					<div className="resume">
-						<span>
-							<a
-								href="mailto: ren.amelie@gmail.com"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Me contacter
-							</a>
-						</span>
+				<Fade bottom duration={2000} delay={200}>
+					<div className="content">
+						<div className="avatar">
+							<div className="imgMe" data-tip="Salut !" data-for="1"></div>
+							<ReactTooltip id="1" className="tooltip" />
+						</div>
+						{/* <h2>Amélie Ren</h2> */}
+						<div className="resume">
+							<span>
+								<a
+									href="mailto: ren.amelie@gmail.com"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Me contacter
+								</a>
+							</span>
+						</div>
 					</div>
-				</div>
+				</Fade>
 			</div>
 		</Element>
 	)
@@ -36,14 +40,14 @@ const Contact = ({ className }) => {
 export default styled(Contact)`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	min-height: calc(100vh - 4rem);
 
 	& .content {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
 		min-height: 70vh;
 	}
@@ -67,10 +71,15 @@ export default styled(Contact)`
 		color: ${({ theme }) => theme.accentColor};
 	}
 
-	/* & .resume {
-		justify-content: center;
-		align-items: center;
-	} */
+	& .avatar {
+		flex: 2;
+	}
+
+	& .resume {
+		flex: 1;
+		/* justify-content: center;
+		align-items: center; */
+	}
 
 	& .resume span {
 		border: 1px solid ${({ theme }) => theme.accentColor};

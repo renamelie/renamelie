@@ -14,4 +14,8 @@ const IndexPage = ({ className, location }) => {
 	)
 }
 
-export default styled(IndexPage)``
+export default styled(IndexPage)`
+	/* & > * {
+		border: 2px solid purple;
+	} */
+`

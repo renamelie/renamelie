@@ -15,8 +15,9 @@ const Services = ({ className }) => {
 				<div className="listServices">
 					{itemServices.map(({ icon, title, text }, i) => (
 						<Fade
-							left={i % 2 === 0 ? true : false}
-							right={i % 2 !== 0 ? true : false}
+							// left={i % 2 === 0 ? true : false}
+							// right={i % 2 !== 0 ? true : false}
+							top
 							key={i}
 							duration={2000}
 							delay={1000}
@@ -33,7 +34,7 @@ const Services = ({ className }) => {
 export default styled(Services)`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	min-height: calc(100vh - 4rem);
 	transition: 600ms;
@@ -44,6 +45,10 @@ export default styled(Services)`
 		width: 100%;
 		max-width: 1440px;
 		min-height: 70vh;
+	}
+
+	.listServices > * {
+		transition: 0.5s;
 	}
 
 	${media.bigMedium`

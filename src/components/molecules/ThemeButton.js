@@ -7,10 +7,12 @@ import { Icon } from '@components'
 const ToggleContainer = styled.button`
 	position: fixed;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 	right: 0;
-	background: ${({ theme }) => theme.gradient};
+	/* background: ${({ theme }) => theme.gradient}; */
+	background: transparent;
 	border: transparent;
 	/* border: 2px solid ${({ theme }) => theme.toggleBorder}; */
 	border-radius: 30px;

@@ -11,7 +11,7 @@ export const colors = {
 	brandGreyDimmed: '#97abb3',
 	dark: '#121516',
 	pink: 'pink',
-	brandMainLighter: 'rgba(1, 85, 101, 0.2)',
+	brandMainLighter: 'rgba(136, 190, 200, 0.2)',
 	pinkDarker: 'rgba(255,192,203, 0.2)',
 }
 
@@ -21,7 +21,7 @@ export const pxToRem = (px = 16) => {
 
 const sizes = {
 	large: 1200,
-	bigMedium: 970,
+	bigMedium: 975,
 	medium: 800,
 	small: 600,
 	smaller: 321,

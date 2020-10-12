@@ -137,7 +137,7 @@ h6 {
 
 /* Links */
 a {
-  color: var(--brand-cyan);
+  color: ${({ theme }) => theme.textColor};
   text-decoration: none;
   transition: 0.2s ease-out;
 }

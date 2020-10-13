@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+// import { TransitionStyles } from '@styles'
+import TransitionStyles from './TransitionStyles'
+import { media } from '@styles'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -24,6 +27,15 @@ const GlobalStyle = createGlobalStyle`
     --color-headings: var(--brand-main);
 
     /* Typography */
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+
     --font-size-root: 18px;
     --font-size-base: 1rem;
     --font-size-large: 1.2rem;
@@ -50,6 +62,10 @@ const GlobalStyle = createGlobalStyle`
       /* Components spacing */
     --spacer: 1.5rem;
     --border-radius: 0.25rem;
+
+    /* others */
+    --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   *,
@@ -98,42 +114,33 @@ ol {
 
 /* Headings */
 
-h1 {
-  font-size: var(--font-size-h1);
-}
+  section {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 60px 0;
 
-h2 {
-  font-size: var(--font-size-h2);
-}
+    ${media.smaller`
+      padding: 80px 0;
+    `}
 
-h3 {
-  font-size: var(--font-size-h3);
-}
+    ${media.medium`
+      padding: 100px 0;
+    `}
+  }
 
-h4 {
-  font-size: var(--font-size-h4);
-}
 
-h5 {
-  font-size: var(--font-size-h5);
-}
-
-h6 {
-  font-size: var(--font-size-h6);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  color: ${({ theme }) => theme.titleColor};
-  font-weight: var(--font-weight-headings);
-  margin: 0;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-headings);
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: ${({ theme }) => theme.titleColor};
+    line-height: 1.1;
+  }
 
 /* Links */
 a {
@@ -156,6 +163,17 @@ svg {
   margin: 0;
 }
 
+.big-heading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+  }
+
+.medium-heading {
+  margin: 0;
+  font-size: clamp(40px, 8vw, 60px);
+}
+
+${TransitionStyles}
 
 `
 

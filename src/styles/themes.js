@@ -3,6 +3,7 @@ import { MeLight1, MeLight2, MeDark1, MeDark2 } from '@config'
 
 export const lightTheme = {
 	backgroundColor: colors.brandLight,
+	reverseColor: colors.brandDark,
 	textColor: colors.brandGrey,
 	titleColor: colors.brandMainLight,
 	accentColor: colors.brandMainLight,
@@ -19,6 +20,7 @@ export const lightTheme = {
 
 export const darkTheme = {
 	backgroundColor: colors.brandDark,
+	reverseColor: colors.brandLight,
 	textColor: '#7e9199',
 	titleColor: colors.pink,
 	accentColor: colors.pink,

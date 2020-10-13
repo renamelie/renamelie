@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Fade } from 'react-reveal'
+import { media } from '@styles'
 // import { fadeBottom } from '@styles'
 
 // const FadeStyle = styled.div`
@@ -24,11 +25,15 @@ const Title = ({ className, span, text }) => {
 export default styled(Title)`
 	font-size: 2rem;
 	font-weight: 300;
-	margin: 1rem 0 2rem 0;
+	margin: 1rem 0;
 	text-transform: uppercase;
 
 	span {
 		font-size: 3rem;
 		font-weight: 500;
 	}
+
+	${media.bigMedium`
+		margin: 1rem 0 2rem;
+	`}
 `

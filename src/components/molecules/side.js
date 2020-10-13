@@ -1,21 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import styled from 'styled-components'
 import { media } from '@styles'
-import { Fade } from 'react-reveal'
 
 const Side = ({ className, children, orientation }) => {
+	const [isMounted, setIsMounted] = useState(false)
+
+	useEffect(() => {
+		const timeout = setTimeout(() => setIsMounted(true), 2000)
+		return () => clearTimeout(timeout)
+	}, [])
+
 	return (
 		<div className={className} orientation={orientation}>
-			<Fade
-				left={orientation === 'left' ? true : false}
-				right={orientation === 'right' ? true : false}
-				delay={1000}
-				duration={2000}
-			>
-				{children}
-			</Fade>
+			<TransitionGroup component={null}>
+				{isMounted && (
+					<CSSTransition
+						classNames={orientation === 'left' ? 'fadeleft' : 'faderight'}
+						timeout={2000}
+					>
+						{children}
+					</CSSTransition>
+				)}
+			</TransitionGroup>
 		</div>
 	)
 }

@@ -21,10 +21,10 @@ export const pxToRem = (px = 16) => {
 
 const sizes = {
 	large: 1200,
-	bigMedium: 975,
+	bigMedium: 1000,
 	medium: 800,
 	small: 600,
-	smaller: 321,
+	smaller: 480,
 }
 
 // Iterate through the sizes and create a media template

@@ -49,6 +49,7 @@ module.exports = {
 					'@pages': path.resolve(__dirname, 'src/pages'),
 					'@styles': path.resolve(__dirname, 'src/styles'),
 					'@resume': path.resolve(__dirname, 'src/resume.pdf'),
+					'@utils': path.resolve(__dirname, 'src/utils'),
 				},
 				extensions: [],
 			},

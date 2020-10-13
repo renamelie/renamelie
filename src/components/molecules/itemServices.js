@@ -67,7 +67,7 @@ const StyledItem = styled.div`
 	}
 
 	${media.bigMedium`
-		margin: 2rem 0 2rem 0;
+		margin: 2rem 0;
 	`}
 `
 

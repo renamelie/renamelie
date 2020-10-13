@@ -2,54 +2,50 @@ import React from 'react'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 import ReactTooltip from 'react-tooltip'
-import { Fade } from 'react-reveal'
 
 import { Title } from '@components'
 import { pxToRem } from '@styles'
+import { email } from '@config'
 
 const Contact = ({ className }) => {
 	return (
 		<Element name="#contact">
 			<div className={className}>
 				<Title span="C" text="ontact" />
-				<Fade bottom duration={2000} delay={200}>
-					<div className="content">
-						<div className="avatar">
-							<div className="imgMe" data-tip="Salut !" data-for="1"></div>
-							<ReactTooltip id="1" className="tooltip" />
-						</div>
-						{/* <h2>Amélie Ren</h2> */}
-						<div className="resume">
-							<span>
-								<a
-									href="mailto: ren.amelie@gmail.com"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Me contacter
-								</a>
-							</span>
-						</div>
+				<div className="content">
+					<div className="avatar">
+						<div className="imgMe" data-tip="Salut !" data-for="1"></div>
+						<ReactTooltip id="1" className="tooltip" />
 					</div>
-				</Fade>
+
+					<p>
+						Interested in my work? I'm open to discuss ideas and professional
+						opportunities. Drop me a direct email.
+					</p>
+
+					<a href={`mailto:${email}`}>Get in touch</a>
+				</div>
 			</div>
 		</Element>
 	)
 }
 
 export default styled(Contact)`
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center; */
 	min-height: calc(100vh - 4rem);
+	max-width: 600px;
+	margin: 0 auto 100px;
+	text-align: center;
 
 	& .content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		min-height: 70vh;
+		/* min-height: 70vh; */
 	}
 
 	.imgMe {
@@ -71,30 +67,18 @@ export default styled(Contact)`
 		color: ${({ theme }) => theme.accentColor};
 	}
 
-	& .avatar {
-		flex: 2;
-	}
-
-	& .resume {
-		flex: 1;
-		/* justify-content: center;
-		align-items: center; */
-	}
-
-	& .resume span {
+	& a {
+		font-size: 16px;
+		color: ${({ theme }) => theme.accentColor};
 		border: 1px solid ${({ theme }) => theme.accentColor};
 		border-radius: 5px;
 		padding: 1rem;
 		cursor: pointer;
-		transition: 600ms;
+		margin-top: 50px;
+		transition: var(--transition);
 	}
 
-	& .resume span:hover {
+	& a:hover {
 		background-color: ${({ theme }) => theme.accentLightColor};
-	}
-
-	& .resume span a {
-		font-size: 16px;
-		color: ${({ theme }) => theme.accentColor};
 	}
 `

@@ -6,10 +6,10 @@ const IndexPage = ({ className, location }) => {
 	return (
 		<Layout className={className} location={location}>
 			<SEO />
-			<About />
-			<Services />
+			{/* <About />
+			<Services /> */}
 			<Portfolio />
-			<Contact />
+			{/* <Contact /> */}
 		</Layout>
 	)
 }

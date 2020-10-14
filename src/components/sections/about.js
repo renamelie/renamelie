@@ -37,10 +37,6 @@ const About = ({ className }) => {
 							</CSSTransition>
 						))}
 				</TransitionGroup>
-				{/* <p>
-					I'm a software engineer based in Paris, I build exceptional websites,
-					applications in React, Gatsby ..
-				</p> */}
 			</div>
 		</Element>
 	)

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Header, Footer, Social, Email } from '@components'
+import { Header, Footer, Social, Email, Aside } from '@components'
 import { media } from '@styles'
 
 const StyledContent = styled.div`
@@ -11,11 +11,19 @@ const StyledContent = styled.div`
 	min-height: 100vh;
 `
 
-const Layout = ({ className, children }) => {
+const Layout = ({ className, children, location }) => {
+	let header
+
+	if (location.pathname === '/') {
+		header = <Header />
+	} else {
+		header = <Aside />
+	}
+
 	return (
 		<div id="root">
 			<StyledContent>
-				<Header />
+				{header}
 				<Social />
 				<Email />
 				<div>

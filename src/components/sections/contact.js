@@ -81,4 +81,8 @@ export default styled(Contact)`
 	& a:hover {
 		background-color: ${({ theme }) => theme.accentLightColor};
 	}
+
+	& p {
+		margin-top: 20px;
+	}
 `

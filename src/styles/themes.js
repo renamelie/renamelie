@@ -8,6 +8,7 @@ export const lightTheme = {
 	titleColor: colors.brandMainLight,
 	accentColor: colors.brandMainLight,
 	accentLightColor: colors.brandMainLighter,
+	boxShadow: '0 3px 5px rgba(0, 0, 0, 0.05), 0 5px 16px rgba(0, 0, 0, 0.05)',
 
 	// Toggle Button
 	toggleBorder: '#fff',
@@ -25,6 +26,7 @@ export const darkTheme = {
 	titleColor: colors.pink,
 	accentColor: colors.pink,
 	accentLightColor: colors.pinkDarker,
+	boxShadow: '0 3px 5px rgba(0, 0, 0, 0.25), 0 5px 16px rgba(0, 0, 0, 0.25)',
 
 	// Toggle Button
 	toggleBorder: '#6B8096',

@@ -113,11 +113,8 @@
       url: https://github.com/renamelie/Retro
   techstack:
     - React
-    - Gatsby
     - HTML
     - CSS
     - JavaScript
-    - GraphQL
-    - Netlify
     - Github
     - VSCode

@@ -35,12 +35,11 @@ const Portfolio = ({ className }) => {
 			<div className={className}>
 				<Title span="P" text="ortfolio" />
 				<div className="projects">
-					{/* <Fade top duration={2000} delay={1000}>
+					<Fade top duration={2000} delay={1000}>
 						{projects.map(({ node }, i) => (
 							<Project key={i} node={node} />
 						))}
-					</Fade> */}
-					En construction
+					</Fade>
 				</div>
 			</div>
 		</Element>

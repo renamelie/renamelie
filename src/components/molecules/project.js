@@ -18,8 +18,8 @@ const StyledProject = styled.article`
 		margin: 0;
 		z-index: 2;
 		padding: calc(1.5rem / 3) 1.5rem;
-		background-color: ${({ theme }) => theme.accentColor};
-		color: ${colors.brandLight};
+		background-color: ${colors.dark};
+		color: ${({ theme }) => theme.accentColor};
 		transform: translate3d(0, -1rem, 0);
 		transition: transform 01s ease;
 	}

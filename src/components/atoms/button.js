@@ -23,7 +23,8 @@ Button.propTypes = {
 }
 
 export default styled(Button)`
-	display: block;
+	display: flex;
+	align-items: center;
 	width: 100%;
 	color: ${({ theme }) => theme.accentColor};
 	text-align: center;

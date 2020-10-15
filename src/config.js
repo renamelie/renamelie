@@ -65,53 +65,33 @@ export const socialMedia = [
 export const itemServices = [
 	{
 		icon: <Icon name="FaTools" />,
-		title: 'Gestion de projets web',
-		text:
-			'Site vitrine, corporate, évènementiel, blog, e-commerce, application mobile.',
+		title: 'Web projects',
+		text: 'Showcase website, corporate, events, blog, e-commerce, portfolio.',
 	},
 	{
 		icon: <Icon name="FaPencilRuler" />,
-		title: 'Conception graphique',
+		title: 'Graphic design',
 		text:
-			'Templates Web, newsletters, emaillings, cartes de visite, plaquette publicitaires..',
+			'Web templates, newsletters, emailings, cbusiness cards, advertising brochure .. ',
 	},
 	{
 		icon: <Icon name="FaCode" />,
-		title: 'Intégration web',
-		text:
-			'Intégration HTML / CSS depuis une maquette en suivant les standards du web.',
+		title: 'Web integration',
+		text: 'Convert model to HTML/CSS.',
 	},
 	{
 		icon: <Icon name="FaLaptopCode" />,
 		title: 'Responsive web design',
-		text:
-			'Compatible tous supports : mobiles, tablettes, PC portables et desktop.',
+		text: 'Compatible with all devices: mobiles, tablets, laptops and desktop.',
 	},
 	{
 		icon: <Icon name="GiMagnifyingGlass" />,
-		title: 'Référencement naturel',
-		text:
-			'Affichage sémantique des informations pour un référencement optimal.',
+		title: 'Natural referencing',
+		text: 'Web Accessibility and SEO.',
 	},
 	{
 		icon: <Icon name="FaAngellist" />,
-		title: 'Animations des pages',
-		text: 'Pages web interactives pour embellir votre projet.',
+		title: 'Pages animations',
+		text: 'Designed Web & Interactive Websites.',
 	},
 ]
-
-// export const srConfig = (delay = 200, viewFactor = 0.25) => ({
-// 	origin: 'bottom',
-// 	distance: '20px',
-// 	duration: 500,
-// 	delay,
-// 	rotate: { x: 0, y: 0, z: 0 },
-// 	opacity: 0,
-// 	scale: 1,
-// 	easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-// 	mobile: true,
-// 	reset: false,
-// 	useDelay: 'always',
-// 	viewFactor,
-// 	viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-// })

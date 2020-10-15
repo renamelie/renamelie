@@ -138,7 +138,7 @@ ol {
   h6 {
     font-family: var(--font-family-headings);
     margin: 0 0 10px 0;
-    font-weight: 600;
+    font-weight: 500;
     color: ${({ theme }) => theme.titleColor};
     line-height: 1.1;
   }
@@ -164,6 +164,10 @@ svg {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .big-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 80px);
@@ -172,6 +176,19 @@ svg {
 .medium-heading {
   margin: 0;
   font-size: clamp(40px, 8vw, 60px);
+}
+
+.metatitle {
+  font-size: var(--font-size-h3);
+  margin-bottom: calc(var(--spacer) * 1.5);
+}
+
+.metatitle span {
+  display: block;
+  margin-top: calc(var(--spacer) / 3);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  color: var(--brand-grey-light);
 }
 
 ${TransitionStyles}

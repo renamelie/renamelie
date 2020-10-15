@@ -8,19 +8,11 @@
   links:
     - title: commons.oceanprotocol.com
       icon: Compass
-      url: https://commons.oceanprotocol.com
+      url: https://google.com
     - title: '@oceanprotocol/commons'
-      icon: GitHub
+      icon: Github
       url: https://github.com/oceanprotocol/commons
-    - title: Ocean Protocol and IPFS, Sitting In The Merkle Tree
-      icon: FileText
-      url: https://kremalicious.com/ocean-protocol-and-ipfs-sitting-in-the-merkle-tree
-    - title: The Commons Marketplace in Pacific Network
-      icon: FileText
-      url: https://kremalicious.com/the-commons-marketplace-in-pacific-network
-    - title: The Commons Marketplace
-      icon: FileText
-      url: https://kremalicious.com/the-commons-marketplace
+
   techstack:
     - HTML
     - SCSS
@@ -49,21 +41,7 @@
       url: https://oceanprotocol.com
     - title: Styleguide
       url: https://oceanprotocol.com/art
-    - title: docs.oceanprotocol.com
-      icon: Compass
-      url: https://docs.oceanprotocol.com
-    - title: ipfs.oceanprotocol.com
-      icon: Compass
-      url: https://ipfs.oceanprotocol.com
-    - title: '@oceanprotocol/art'
-      icon: GitHub
-      url: https://github.com/oceanprotocol/art
-    - title: '@oceanprotocol/docs'
-      icon: GitHub
-      url: https://github.com/oceanprotocol/docs
-    - title: '@oceanprotocol/ipfs'
-      icon: GitHub
-      url: https://github.com/oceanprotocol/ipfs
+
   techstack:
     - Sketch
     - Affinity Designer
@@ -88,7 +66,7 @@
   description: >
     From 2015–2017 I was leading the UI design & development of all IPDB web properties and additionally iterated on the creative and visual direction of the IPDB brand.
 
-    The main website is a static site built with Jekyll and a custom Gulp-based build pipeline in front of it. All design & development is embedded in a continuous deployment process via GitHub & Travis.
+    The main website is a static site built with Jekyll and a custom Gulp-based build pipeline in front of it. All design & development is embedded in a continuous deployment process via Github & Travis.
 
     Branding and key visuals in collaboration with [Wojciech Hupert](https://twitter.com/wojciechhupert).
 
@@ -105,8 +83,8 @@
     - 3Scale
 
   links:
-    - title: GitHub
-      url: https://github.com/ipdb/website
+    - title: Github
+      url: https://Github.com/ipdb/website
 
 - title: Berlin Innovation Ventures
   slug: /biv/
@@ -134,12 +112,12 @@
       url: https://2017.9984.io
     - title: Styleguide
       url: https://2017.9984.io/styleguide/
-    - title: GitHub
-      url: https://github.com/9984/2017.9984.io
+    - title: Github
+      url: https://Github.com/9984/2017.9984.io
   description: >
     In 2017 I was leading the UI design & development for the 9984 >> Summit, the first joint summit of BigchainDB & IPDB. Additionally, I conceptualized, executed and iterated on the creative and visual direction of the 9984 brand.
 
-    The main website is a static site built with Jekyll and a custom Gulp-based build pipeline in front of it. All design & development is embedded in a continuous deployment process via GitHub & Travis.
+    The main website is a static site built with Jekyll and a custom Gulp-based build pipeline in front of it. All design & development is embedded in a continuous deployment process via Github & Travis.
 
     Branding and key visuals in collaboration with [Cristina Vulpe](https://www.linkedin.com/in/cristina-vulpe-41469262) & [Wojciech Hupert](https://twitter.com/wojciechhupert).
   techstack:

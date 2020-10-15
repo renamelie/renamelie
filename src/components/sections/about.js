@@ -54,6 +54,12 @@ export default styled(About)`
 		width: 100%;
 	}
 
+	h1,
+	h2,
+	h3 {
+		font-weight: 600;
+	}
+
 	& h1 {
 		font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
 		font-weight: 400;

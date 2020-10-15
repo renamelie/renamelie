@@ -34,17 +34,17 @@ const Services = ({ className }) => {
 export default styled(Services)`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	min-height: calc(100vh - 4rem);
 	transition: 600ms;
+	padding-bottom: 2rem;
 
 	.listServices {
 		display: grid;
 		grid-template-columns: 1fr;
 		width: 100%;
 		max-width: 1440px;
-		min-height: 70vh;
 	}
 
 	.listServices > * {

@@ -3,41 +3,22 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { SEO, Layout, ProjectImage } from '@components'
 import { media } from '@styles'
-
-const StyledProjectImages = styled.div`
-	width: 100%;
-
-	& > * {
-		transition: var(--transition);
-		margin-bottom: calc(var(--spacer) * 3);
-	}
-
-	${media.medium`
-		& > * {
-			margin-bottom: calc(var(--spacer) * 6);
-		}
-	`}
-`
-
-const ProjectImages = ({ projectImages, title }) => {
-	return (
-		<StyledProjectImages>
-			{projectImages.map(({ node }, i) => (
-				<ProjectImage key={i} fluid={node.fluid} alt={title} />
-			))}
-		</StyledProjectImages>
-	)
-}
+import {
+	SEO,
+	Layout,
+	ProjectImage,
+	ProjectLinks,
+	ProjectTechs,
+} from '@components'
 
 const Project = ({ data, location, className }) => {
-	const { title, links, techstack, description } = data.projectsYaml
+	const { title, description, links, techstack } = data.projectsYaml
 	const projectImages = data.projectImages.edges
 
 	return (
 		<Layout location={location} className={className}>
-			<SEO />
+			<SEO title={title} />
 			<article className={className}>
 				<header>
 					<h1>{title}</h1>
@@ -46,16 +27,23 @@ const Project = ({ data, location, className }) => {
 						dangerouslySetInnerHTML={{ __html: description }}
 					></div>
 				</header>
-				<ProjectImages projectImages={projectImages} title={title} />
+				<div className="images">
+					{projectImages.map(({ node }, i) => (
+						<ProjectImage key={i} fluid={node.fluid} alt={title} />
+					))}
+				</div>
+				<footer className="meta">
+					{links && <ProjectLinks links={links} />}
+					{techstack && <ProjectTechs techstack={techstack} />}
+				</footer>
 			</article>
 		</Layout>
 	)
 }
 
-Project.propTypes = {}
-
-Layout.propTypes = {
-	children: PropTypes.node.isRequired,
+Project.propTypes = {
+	data: PropTypes.object.isRequired,
+	location: PropTypes.object.isRequired,
 }
 
 export default styled(Project)`
@@ -67,13 +55,45 @@ export default styled(Project)`
 	width: 100%;
 
 	header {
-		max-width: 800px;
+		max-width: 700px;
 		margin: 4rem 0;
 	}
 
 	h1 {
 		font-size: var(--font-size-h2);
 	}
+
+	/* Images */
+
+	.images {
+		width: 100%;
+	}
+
+	.images > * {
+		transition: var(--transition);
+		margin-bottom: calc(var(--spacer) * 3);
+	}
+
+	${media.medium`
+		.images > * {
+			margin-bottom: calc(var(--spacer) * 6);
+		}
+	`}
+
+	/* Footer */
+	footer {
+		margin-top: -2rem;
+		margin-bottom: calc(var(--spacer) * 5);
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: calc(var(--spacer) * 2);
+	}
+
+	${media.medium`
+		footer {
+			grid-template-columns: 2fr 3fr;
+		}
+	`}
 `
 
 export const projectQuery = graphql`

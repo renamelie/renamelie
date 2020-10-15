@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { FaHome } from 'react-icons/fa'
+
+import { Icon } from '@components'
 import { colors, media } from '@styles'
 
 const Aside = ({ className }) => {
@@ -30,7 +31,7 @@ const Aside = ({ className }) => {
 			}}
 		>
 			<Link to="/" style={{ verticalAlign: 'middle' }}>
-				<FaHome />
+				<Icon name="FaHome" />
 			</Link>
 			<div className="profile">
 				<h1>Ren Amélie</h1>

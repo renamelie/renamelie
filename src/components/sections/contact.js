@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 import ReactTooltip from 'react-tooltip'
+import { Fade } from 'react-reveal'
 
 import { Title } from '@components'
 import { pxToRem } from '@styles'
@@ -12,19 +13,21 @@ const Contact = ({ className }) => {
 		<Element name="#contact">
 			<div className={className}>
 				<Title span="C" text="ontact" />
-				<div className="content">
-					<div className="avatar">
-						<div className="imgMe" data-tip="Salut !" data-for="1"></div>
-						<ReactTooltip id="1" className="tooltip" />
+				<Fade top duration={2000} delay={1000}>
+					<div className="content">
+						<div className="avatar">
+							<div className="imgMe" data-tip="Salut !" data-for="1"></div>
+							<ReactTooltip id="1" className="tooltip" />
+						</div>
+
+						<p>
+							Interested in my work? I'm open to discuss ideas and professional
+							opportunities. Drop me a direct email.
+						</p>
+
+						<a href={`mailto:${email}`}>Get in touch</a>
 					</div>
-
-					<p>
-						Interested in my work? I'm open to discuss ideas and professional
-						opportunities. Drop me a direct email.
-					</p>
-
-					<a href={`mailto:${email}`}>Get in touch</a>
-				</div>
+				</Fade>
 			</div>
 		</Element>
 	)

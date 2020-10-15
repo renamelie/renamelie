@@ -5,10 +5,12 @@ export const lightTheme = {
 	backgroundColor: colors.brandLight,
 	reverseColor: colors.brandDark,
 	textColor: colors.brandGrey,
+	accentTextColor: colors.brandGreyLight,
 	titleColor: colors.brandMainLight,
 	accentColor: colors.brandMainLight,
 	accentLightColor: colors.brandMainLighter,
 	boxShadow: '0 3px 5px rgba(0, 0, 0, 0.05), 0 5px 16px rgba(0, 0, 0, 0.05)',
+	boxBgColor: 'rgba(255, 255, 255, 0.2)',
 
 	// Toggle Button
 	toggleBorder: '#fff',
@@ -23,10 +25,12 @@ export const darkTheme = {
 	backgroundColor: colors.brandDark,
 	reverseColor: colors.brandLight,
 	textColor: '#7e9199',
+	accentTextColor: colors.brandGrey,
 	titleColor: colors.pink,
 	accentColor: colors.pink,
 	accentLightColor: colors.pinkDarker,
 	boxShadow: '0 3px 5px rgba(0, 0, 0, 0.25), 0 5px 16px rgba(0, 0, 0, 0.25)',
+	boxBgColor: 'rgba(255, 255, 255, 0.03)',
 
 	// Toggle Button
 	toggleBorder: '#6B8096',

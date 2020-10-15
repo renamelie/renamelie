@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
 import { Title, Project } from '@components'
+import { Fade } from 'react-reveal'
 
 import { media } from '@styles'
 
@@ -34,9 +35,12 @@ const Portfolio = ({ className }) => {
 			<div className={className}>
 				<Title span="P" text="ortfolio" />
 				<div className="projects">
-					{projects.map(({ node }, i) => (
-						<Project key={i} node={node} />
-					))}
+					{/* <Fade top duration={2000} delay={1000}>
+						{projects.map(({ node }, i) => (
+							<Project key={i} node={node} />
+						))}
+					</Fade> */}
+					En construction
 				</div>
 			</div>
 		</Element>
@@ -49,17 +53,14 @@ export default styled(Portfolio)`
 	justify-content: space-between;
 	align-items: center;
 	min-height: calc(100vh - 4rem);
+	padding-bottom: 2rem;
 
 	& .projects {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: calc(var(--spacer) * 3);
-		/* max-width: 1440px; */
 		max-width: calc(var(--projectImageMaxWidth) + var(--spacer) * 2);
 		width: 100%;
-		/* margin: 0 auto;
-		padding-left: var(--spacer);
-		padding-right: var(--spacer); */
 	}
 
 	${media.medium`

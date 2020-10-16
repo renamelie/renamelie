@@ -27,7 +27,7 @@ const Services = ({ className }) => {
 export default styled(Services)`
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	min-height: calc(100vh - 4rem);
 	transition: 600ms;
@@ -45,6 +45,8 @@ export default styled(Services)`
 	}
 
 	${media.bigMedium`
+		justify-content: flex-start;
+
 		.listServices {
 			grid-template-columns: 1fr 1fr;
 		}

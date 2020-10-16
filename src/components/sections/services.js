@@ -14,14 +14,7 @@ const Services = ({ className }) => {
 				<Title span="S" text="ervices" />
 				<div className="listServices">
 					{itemServices.map(({ icon, title, text }, i) => (
-						<Fade
-							// left={i % 2 === 0 ? true : false}
-							// right={i % 2 !== 0 ? true : false}
-							top
-							key={i}
-							duration={2000}
-							delay={1000}
-						>
+						<Fade top key={i} duration={2000} delay={1000}>
 							<Item icon={icon} title={title} text={text} />
 						</Fade>
 					))}

@@ -62,7 +62,7 @@ const StyledItem = styled.div`
 
 	p {
 		font-size: ${pxToRem(14)};
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.5rem;
 	}
 

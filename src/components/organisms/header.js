@@ -28,7 +28,6 @@ const Header = ({ className }) => {
 			className={className}
 			style={{
 				backgroundColor: navBackground ? colors.dark : 'transparent',
-				// boxShadow: navBackground ? '0 4px 2px -2px rgba(0,0,0,.2)' : 'none',
 				transition: '1s ease',
 			}}
 		>
@@ -70,7 +69,6 @@ export default styled(Header)`
 	z-index: 99;
 
 	& ul {
-		/* flex: 4; */
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
@@ -80,7 +78,6 @@ export default styled(Header)`
 	}
 
 	& .resume {
-		/* flex: 1; */
 		display: none;
 		justify-content: center;
 		align-items: center;

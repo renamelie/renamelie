@@ -22,7 +22,7 @@ function SEO({ description, lang, meta, title }) {
 						description
 						author
 						label
-						url
+						siteUrl
 					}
 				}
 			}
@@ -59,7 +59,7 @@ function SEO({ description, lang, meta, title }) {
 				},
 				{
 					property: `og:url`,
-					content: site.siteMetadata.url || `https://renamelie.com/`,
+					content: site.siteMetadata.siteUrl || `https://renamelie.com/`,
 				},
 				{
 					property: `og:image`,

@@ -7,7 +7,7 @@ module.exports = {
 		label: 'developer & freelance',
 		description: `Hello, Amélie, developer & freelance, nice to meet you.`,
 		author: `@renamelie`,
-		url: `https://renamelie.com/`,
+		siteUrl: `https://renamelie.com/`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -72,8 +72,8 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-anchor-links`,
-		`gatsby-plugin-csp`,
-		'gatsby-plugin-robots-txt',
+		`gatsby-plugin-csp`, // Cross-Site Scripting // Secu
+		'gatsby-plugin-robots-txt', // Create robots.txt // SEO
 		// 'gatsby-plugin-htaccess',
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline

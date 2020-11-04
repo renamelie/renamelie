@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { useIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 import ReactTooltip from 'react-tooltip'
@@ -9,8 +11,10 @@ import { pxToRem } from '@styles'
 import { email } from '@config'
 
 const Contact = ({ className }) => {
+	const intl = useIntl()
+
 	return (
-		<Element name="#contact">
+		<Element name="#contact" id="contact">
 			<div className={className}>
 				<Title span="C" text="ontact" />
 				<Fade top duration={2000} delay={1000}>
@@ -20,10 +24,7 @@ const Contact = ({ className }) => {
 							<ReactTooltip id="1" className="tooltip" />
 						</div>
 
-						<p>
-							Interested in my work? I'm open to discuss ideas and professional
-							opportunities. Drop me a direct email.
-						</p>
+						<p>{intl.formatMessage({ id: 'contact' })}</p>
 
 						<a href={`mailto:${email}`}>Get in touch</a>
 					</div>
@@ -33,11 +34,15 @@ const Contact = ({ className }) => {
 	)
 }
 
+Contact.propTypes = {
+	className: PropTypes.string.isRequired,
+}
+
 export default styled(Contact)`
-	/* display: flex;
+	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center; */
+	justify-content: center;
+	align-items: center;
 	min-height: calc(100vh - 4rem);
 	max-width: 600px;
 	margin: 0 auto 100px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
@@ -31,7 +32,7 @@ const Portfolio = ({ className }) => {
 	const projects = data.allProjectsYaml.edges
 
 	return (
-		<Element name="#portfolio">
+		<Element name="#portfolio" id="portfolio">
 			<div className={className}>
 				<Title span="P" text="ortfolio" />
 				<div className="projects">
@@ -44,6 +45,10 @@ const Portfolio = ({ className }) => {
 			</div>
 		</Element>
 	)
+}
+
+Portfolio.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default styled(Portfolio)`

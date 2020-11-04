@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { useIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 import { FaEnvelope } from 'react-icons/fa'
@@ -9,6 +11,7 @@ import { email } from '@config'
 
 const About = ({ className }) => {
 	const [isMounted, setIsMounted] = useState(false)
+	const intl = useIntl()
 
 	useEffect(() => {
 		const timeout = setTimeout(() => setIsMounted(true), 1000)
@@ -16,10 +19,14 @@ const About = ({ className }) => {
 	}, [])
 
 	const items = [
-		<h1>Hi, my name is</h1>,
-		<h2 className="big-heading">Ren Amélie.</h2>,
-		<h3 className="medium-heading">I'm a freelance web developer.</h3>,
-		<span className="contact">
+		<h1 key={0}>{intl.formatMessage({ id: 'hello' })}</h1>,
+		<h2 key={1} className="big-heading">
+			Ren Amélie.
+		</h2>,
+		<h3 key={2} className="medium-heading">
+			{intl.formatMessage({ id: 'whoami' })}
+		</h3>,
+		<span key={3} className="contact">
 			<a href={`mailto:${email}`}>
 				<FaEnvelope />
 			</a>
@@ -27,7 +34,7 @@ const About = ({ className }) => {
 	]
 
 	return (
-		<Element name="#about">
+		<Element name="#about" id="about">
 			<div className={className}>
 				<TransitionGroup component={null}>
 					{isMounted &&
@@ -40,6 +47,10 @@ const About = ({ className }) => {
 			</div>
 		</Element>
 	)
+}
+
+About.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default styled(About)`

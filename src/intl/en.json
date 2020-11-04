@@ -1,0 +1,29 @@
+{
+  "hello": "Hi, my name is",
+  "whoami": "I'm a freelance web developer.",
+  "contact": "Interested in my work? I'm open to discuss ideas and professional opportunities. Drop me a direct email.",
+  "services1": {
+    "name": "Web projects",
+    "detail": "Showcase website, corporate, events, blog, e-commerce, portfolio."
+  },
+  "services2": {
+    "name": "Graphic design",
+    "detail": "Web templates, newsletters, emailings, business cards, advertising brochure .."
+  },
+  "services3": {
+    "name": "Web integration",
+    "detail": "Convert model to HTML/CSS."
+  },
+  "services4": {
+    "name": "Responsive web design",
+    "detail": "Compatible with all devices: mobiles, tablets, laptops and desktop."
+  },
+  "services5": {
+    "name": "Natural referencing",
+    "detail": "Web Accessibility and SEO."
+  },
+  "services6": {
+    "name": "Pages animations",
+    "detail": "Designed Web & Interactive Websites."
+  }
+}

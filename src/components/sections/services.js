@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
 import { Fade } from 'react-reveal'
@@ -9,10 +10,15 @@ import { Title, ItemServices as Item } from '@components'
 
 const Services = ({ className }) => {
 	return (
-		<Element name="#services">
+		<Element name="#services" id="services">
 			<div className={className}>
 				<Title span="S" text="ervices" />
 				<div className="listServices">
+					{/* {itemServices.map(({ icon, title, text }, i) => (
+						<Fade top key={i} duration={2000} delay={1000}>
+							<Item icon={icon} title={title} text={text} />
+						</Fade>
+					))} */}
 					{itemServices.map(({ icon, title, text }, i) => (
 						<Fade top key={i} duration={2000} delay={1000}>
 							<Item icon={icon} title={title} text={text} />
@@ -22,6 +28,10 @@ const Services = ({ className }) => {
 			</div>
 		</Element>
 	)
+}
+
+Services.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default styled(Services)`
@@ -45,8 +55,6 @@ export default styled(Services)`
 	}
 
 	${media.bigMedium`
-		justify-content: flex-start;
-
 		.listServices {
 			grid-template-columns: 1fr 1fr;
 		}

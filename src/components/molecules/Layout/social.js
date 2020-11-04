@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { Side } from '@components'
@@ -19,6 +20,10 @@ const Social = ({ className }) => {
 			</ul>
 		</Side>
 	)
+}
+
+Social.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default styled(Social)`

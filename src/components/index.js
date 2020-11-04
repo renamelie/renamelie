@@ -7,17 +7,24 @@ export { default as Contact } from './sections/contact'
 
 export { default as Header } from './organisms/header'
 export { default as Footer } from './organisms/footer'
-export { default as Aside } from './organisms/aside'
 
 export { default as ThemeButton } from './molecules/ThemeButton'
 export { useDarkMode } from './molecules/useDarkMode'
-export { default as Side } from './molecules/side'
-export { default as Social } from './molecules/social'
-export { default as Email } from './molecules/email'
-export { default as ItemServices } from './molecules/itemServices'
-export { default as Project } from './molecules/project'
-export { default as ProjectLinks } from './molecules/projectLinks'
-export { default as ProjectTechs } from './molecules/projectTechs'
+
+export { default as Side } from './molecules/Layout/side'
+export { default as Social } from './molecules/Layout/social'
+export { default as Email } from './molecules/Layout/email'
+export { default as LanguageSelector } from './molecules/Layout/languageSelector'
+
+export { default as Anchor } from './molecules/Header/anchor'
+export { default as CheckLocation } from './molecules/Header/checkLocation'
+
+export { default as ItemServices } from './molecules/Services/itemServices'
+
+export { default as Project } from './molecules/Portfolio/project'
+
+export { default as ProjectLinks } from './molecules/Project/projectLinks'
+export { default as ProjectTechs } from './molecules/Project/projectTechs'
 
 export { default as SEO } from './atoms/seo'
 export { default as Icon } from './atoms/icons/icon'

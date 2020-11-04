@@ -1,0 +1,29 @@
+{
+  "hello": "Salut, moi c’est",
+  "whoami": "Je suis développeur web en freelance.",
+  "contact": "Intéressé par mon travail ? Je suis ouverte à des opportunités de missions. Envoyez moi un mail !",
+  "services1": {
+    "name": "Projets web",
+    "detail": "Site vitrine, corporate, évènementiel, blog, e-commerce, portfolio."
+  },
+  "services2": {
+    "name": "Conception graphique",
+    "detail": "Templates Web, newsletters, emailimgs, cartes de visite, plaquette publicitaires .."
+  },
+  "services3": {
+    "name": "Intégration web",
+    "detail": "Intégration HTML/CSS depuis une maquette en suivant les standards du web."
+  },
+  "services4": {
+    "name": "Responsive web design",
+    "detail": "Compatible tous supports: mobiles, tablettes, PC portables et desktop."
+  },
+  "services5": {
+    "name": "Référencement naturel",
+    "detail": "Affichage sémantique des informations pour un référencement optimal."
+  },
+  "services6": {
+    "name": "Animations des pages",
+    "detail": "Pages web interactives pour embellir votre projet."
+  }
+}

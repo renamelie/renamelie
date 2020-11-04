@@ -30,6 +30,7 @@ const Side = ({ className, children, orientation }) => {
 }
 
 Side.propTypes = {
+	className: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
 	orientation: PropTypes.string,
 }

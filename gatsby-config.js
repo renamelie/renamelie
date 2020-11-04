@@ -51,11 +51,26 @@ module.exports = {
 					'@styles': path.resolve(__dirname, 'src/styles'),
 					'@resume': path.resolve(__dirname, 'src/resume.pdf'),
 					'@utils': path.resolve(__dirname, 'src/utils'),
+					'@context': path.resolve(__dirname, 'src/context'),
 				},
 				extensions: [],
 			},
 		},
 		`gatsby-plugin-smoothscroll`,
+		{
+			resolve: `gatsby-plugin-intl`,
+			options: {
+				// Directory with the strings JSON
+				path: `${__dirname}/src/intl`,
+				// Supported languages
+				languages: [`fr`, `en`],
+				// Default site language
+				defaultLanguage: `en`,
+				// Redirects to `/en` in the route `/`
+				redirect: false,
+			},
+		},
+		`gatsby-plugin-anchor-links`,
 		// 'gatsby-plugin-htaccess',
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline

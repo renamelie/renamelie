@@ -28,7 +28,8 @@ const ProjectLinks = ({ className, links }) => {
 }
 
 ProjectLinks.propTypes = {
-	links: PropTypes.array,
+	className: PropTypes.string.isRequired,
+	links: PropTypes.array.isRequired,
 }
 
 export default styled(ProjectLinks)`

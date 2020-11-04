@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { Side } from '@components'
@@ -12,6 +13,10 @@ const Email = ({ className }) => {
 			</div>
 		</Side>
 	)
+}
+
+Email.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default styled(Email)`

@@ -65,33 +65,32 @@ export const socialMedia = [
 export const itemServices = [
 	{
 		icon: <Icon name="FaTools" />,
-		title: 'Web projects',
-		text: 'Showcase website, corporate, events, blog, e-commerce, portfolio.',
+		title: 'services1.name',
+		text: 'services1.detail',
 	},
 	{
 		icon: <Icon name="FaPencilRuler" />,
-		title: 'Graphic design',
-		text:
-			'Web templates, newsletters, emailings, cbusiness cards, advertising brochure .. ',
+		title: 'services2.name',
+		text: 'services2.detail',
 	},
 	{
 		icon: <Icon name="FaCode" />,
-		title: 'Web integration',
-		text: 'Convert model to HTML/CSS.',
+		title: 'services3.name',
+		text: 'services3.detail',
 	},
 	{
 		icon: <Icon name="FaLaptopCode" />,
-		title: 'Responsive web design',
-		text: 'Compatible with all devices: mobiles, tablets, laptops and desktop.',
+		title: 'services4.name',
+		text: 'services4.detail',
 	},
 	{
 		icon: <Icon name="GiMagnifyingGlass" />,
-		title: 'Natural referencing',
-		text: 'Web Accessibility and SEO.',
+		title: 'services5.name',
+		text: 'services5.detail',
 	},
 	{
 		icon: <Icon name="FaAngellist" />,
-		title: 'Pages animations',
-		text: 'Designed Web & Interactive Websites.',
+		title: 'services6.name',
+		text: 'services6.detail',
 	},
 ]

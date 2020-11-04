@@ -1,4 +1,5 @@
 import React from 'react'
+import { useIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
@@ -42,12 +43,14 @@ const StyledProject = styled.article`
 
 const Project = ({ node }) => {
 	const { slug, title, img } = node
+	const intl = useIntl()
+	const locale = intl.locale !== 'en' ? `/${intl.locale}` : ''
 
 	return (
 		<StyledProject>
-			<Link to={slug}>
+			<Link to={`${locale}${slug}`}>
 				<h1>{title}</h1>
-				<ProjectImage fluid={img.childImageSharp.fluid} alt={title} />
+				{img && <ProjectImage fluid={img.childImageSharp.fluid} alt={title} />}
 			</Link>
 		</StyledProject>
 	)

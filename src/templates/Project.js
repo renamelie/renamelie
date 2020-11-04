@@ -12,12 +12,12 @@ import {
 	ProjectTechs,
 } from '@components'
 
-const Project = ({ data, location, className }) => {
+const Project = ({ data, className }) => {
 	const { title, description, links, techstack } = data.projectsYaml
 	const projectImages = data.projectImages.edges
 
 	return (
-		<Layout location={location} className={className}>
+		<Layout className={className}>
 			<SEO title={title} />
 			<article className={className}>
 				<header>
@@ -42,8 +42,8 @@ const Project = ({ data, location, className }) => {
 }
 
 Project.propTypes = {
+	className: PropTypes.string.isRequired,
 	data: PropTypes.object.isRequired,
-	location: PropTypes.object.isRequired,
 }
 
 export default styled(Project)`

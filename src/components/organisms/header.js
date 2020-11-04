@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from 'react-scroll'
 
+import { CheckLocation } from '@components'
 import { navLinks } from '@config'
 import { colors, media } from '@styles'
 import Pdf from '@resume'
@@ -33,19 +34,12 @@ const Header = ({ className }) => {
 		>
 			<ul>
 				{navLinks.map(({ id, name, icon }, i) => (
-					<Link
-						key={i}
-						activeClass="activeClass"
-						to={id}
-						spy={true}
-						smooth={true}
-						duration={500}
-					>
-						<li>
+					<li key={i}>
+						<CheckLocation link={id}>
 							<span>{icon}</span>
 							<div className="sectionName">{name}</div>
-						</li>
-					</Link>
+						</CheckLocation>
+					</li>
 				))}
 			</ul>
 			<div className="resume">
@@ -57,6 +51,10 @@ const Header = ({ className }) => {
 			</div>
 		</header>
 	)
+}
+
+Header.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default styled(Header)`
@@ -124,6 +122,12 @@ export default styled(Header)`
 
 	& li .sectionName {
 		display: none;
+	}
+
+	& li span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	${media.small`

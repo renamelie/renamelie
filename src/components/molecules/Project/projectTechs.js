@@ -18,7 +18,8 @@ const ProjectTechs = ({ className, techstack }) => {
 }
 
 ProjectTechs.propTypes = {
-	techstack: PropTypes.array,
+	className: PropTypes.string.isRequired,
+	techstack: PropTypes.array.isRequired,
 }
 
 export default styled(ProjectTechs)`

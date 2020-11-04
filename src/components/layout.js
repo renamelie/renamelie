@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Header, Footer, Social, Email, Aside } from '@components'
+import { Header, Footer, Social, Email, LanguageSelector } from '@components'
 import { media } from '@styles'
+import { GlobalContextProvider } from '@context'
 
 const StyledContent = styled.div`
 	display: flex;
@@ -11,33 +12,28 @@ const StyledContent = styled.div`
 	min-height: 100vh;
 `
 
-const Layout = ({ className, children, location }) => {
-	let header
-
-	if (location.pathname === '/') {
-		header = <Header />
-	} else {
-		header = <Aside />
-	}
-
+const Layout = ({ className, children }) => {
 	return (
-		<div id="root">
-			<StyledContent>
-				{header}
-				<Social />
-				<Email />
-				<div>
-					<main className={className}>{children}</main>
-				</div>
-				<Footer />
-			</StyledContent>
-		</div>
+		<GlobalContextProvider>
+			<div id="root">
+				<StyledContent>
+					<Header />
+					<Social />
+					<Email />
+					<LanguageSelector />
+					<div>
+						<main className={className}>{children}</main>
+					</div>
+					<Footer />
+				</StyledContent>
+			</div>
+		</GlobalContextProvider>
 	)
 }
 
 Layout.propTypes = {
+	className: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
-	location: PropTypes.object.isRequired,
 }
 
 export default styled(Layout)`

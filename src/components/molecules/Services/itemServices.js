@@ -2,6 +2,7 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 import { media, pxToRem } from '@styles'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 const StyledItem = styled.div`
 	display: flex;
@@ -78,16 +79,21 @@ const ItemServices = ({ icon, title, text }) => {
 				<span className="icon">{icon}</span>
 			</div>
 			<div className="styledText">
-				<h4>{title}</h4>
-				<p>{text}</p>
+				<h4>
+					<FormattedMessage id={title} />
+				</h4>
+				<p>
+					<FormattedMessage id={text} />
+				</p>
 			</div>
 		</StyledItem>
 	)
 }
 
 ItemServices.propTypes = {
-	title: PropTypes.string,
-	text: PropTypes.string,
+	icon: PropTypes.object.isRequired,
+	title: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
 }
 
 export default ItemServices

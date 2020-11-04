@@ -118,3 +118,25 @@
     - JavaScript
     - Github
     - VSCode
+
+- title: Coloc'Appart
+  slug: /coloc-appart/
+  img: images/coloc-appart-01.png
+  description: >
+    Coloc'Appart. Finally, apartments designed for shared accommodation.
+
+    Website redesign and adding new features.
+  links:
+    - title: Coloc'Appart
+      icon: Compass
+      url: https://coloc-appart.netlify.app/
+  techstack:
+    - React
+    - Gatsby
+    - Redux
+    - Netlify CMS
+    - HTML
+    - CSS
+    - JavaScript
+    - Github
+    - VSCode

@@ -22,6 +22,7 @@ function SEO({ description, lang, meta, title }) {
 						description
 						author
 						label
+						url
 					}
 				}
 			}
@@ -35,7 +36,7 @@ function SEO({ description, lang, meta, title }) {
 	return (
 		<Helmet
 			htmlAttributes={{
-				language,
+				lang: language,
 			}}
 			title={title || 'Home'}
 			titleTemplate={title ? `%s || ${defaultTitle}` : `${defaultTitle}`}
@@ -55,6 +56,16 @@ function SEO({ description, lang, meta, title }) {
 				{
 					property: `og:type`,
 					content: `website`,
+				},
+				{
+					property: `og:url`,
+					content: site.siteMetadata.url || `https://renamelie.com/`,
+				},
+				{
+					property: `og:image`,
+					content:
+						`https://avatars2.githubusercontent.com/u/60107273?s=460&u=514fee63df22a9b1fee334e4c1d9a72a8b5f3019&v=4` ||
+						'',
 				},
 				{
 					name: `twitter:card`,

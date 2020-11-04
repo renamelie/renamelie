@@ -72,12 +72,20 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-anchor-links`,
-		`gatsby-plugin-csp`, // Cross-Site Scripting // Secu
+		// Cross-Site Scripting // Secu
+		{
+			resolve: `gatsby-plugin-csp`,
+			options: {
+				directives: {
+					'style-src': `'self' 'unsafe-inline' 'sha256-WCK...jU='`,
+				},
+			},
+		},
 		'gatsby-plugin-robots-txt', // Create robots.txt // SEO
-		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-sitemap`,
 		// 'gatsby-plugin-htaccess',
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
+		`gatsby-plugin-offline`,
 	],
 }

@@ -2,7 +2,7 @@ const path = require('path')
 
 const {
 	NODE_ENV,
-	URL: NETLIFY_SITE_URL = 'https://www.example.com',
+	URL: NETLIFY_SITE_URL = 'http://renamelie.netlify.app',
 	DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
 	CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
@@ -11,7 +11,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
 	siteMetadata: {
-		title: `Ren Amélie`,
+		title: `ren amelie`,
 		label: 'developer & freelance',
 		description: `Ren Amélie is a software engineer specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.`,
 		author: `@ren_amelie`,

@@ -1,7 +1,20 @@
 {
+  "resume": "./resumeFR.pdf",
+
   "hello": "Salut, moi c’est",
+  "whatido": "Je construis des choses pour le Web.",
   "whoami": "Je suis développeur web en freelance.",
+  "miniDescription": "Je suis déloppeuse Web basée sur Paris spécialisée dans le développement (et parfois le design) de sites Web, d'applications et de tout le reste.",
+
+  "description" : {
+    "p1": "Salut ! Moi, c’est Amélie. Je suis développeuse Front-End basée à Paris.",
+    "p2": "Passionnée depuis toute petite par l’univers du développement web et légèrement maniaque, je porte une grande importance à développer un code propre et correctement organisé.",
+    "p3": "J’aime créer des choses qui vivent sur Internet. Mon objectif est de toujours créer des produits qui offrent des expériences au pixel près.",
+    "p4": "Voici quelques technologies avec lesquelles j'ai travaillé récemment :"
+  },
+
   "contact": "Intéressé par mon travail ? Je suis ouverte à des opportunités de missions. Envoyez moi un mail !",
+
   "services1": {
     "name": "Projets web",
     "detail": "Site vitrine, corporate, évènementiel, blog, e-commerce, portfolio."

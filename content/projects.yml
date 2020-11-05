@@ -104,9 +104,7 @@
   slug: /retro/
   img: images/retro-01.png
   description: >
-    TRAVEL WISH LIST!
-
-    There are SO many places in the world I want to see, and so many things I want to experience. I thought it would be a great idea to compile a list, so I can tick them off when completed 🙂 It’s ambitious, but I’ll get there eventually….
+    Retro Portfolio
   links:
     - title: Github
       icon: Github
@@ -118,6 +116,14 @@
     - JavaScript
     - Github
     - VSCode
+
+- title: Wash Car App
+  slug: /car-wash/
+  img: images/car-wash-01.png
+  description: >
+    I designed a car wash app
+  techstack:
+    - Adobe XD
 
 - title: Coloc'Appart
   slug: /coloc-appart/

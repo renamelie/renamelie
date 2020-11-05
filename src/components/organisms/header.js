@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import { CheckLocation } from '@components'
 import { navLinks } from '@config'
 import { colors, media } from '@styles'
-import Pdf from '@resume'
 
 const Header = ({ className }) => {
 	const [navBackground, setNavBackground] = useState(false)
+	const intl = useIntl()
 	const navRef = useRef()
 	navRef.current = navBackground
 	useEffect(() => {
@@ -44,7 +45,11 @@ const Header = ({ className }) => {
 			</ul>
 			<div className="resume">
 				<span>
-					<a href={Pdf} target="_blank" rel="noreferrer">
+					<a
+						href={intl.formatMessage({ id: 'resume' })}
+						target="_blank"
+						rel="noreferrer"
+					>
 						Resume
 					</a>
 				</span>

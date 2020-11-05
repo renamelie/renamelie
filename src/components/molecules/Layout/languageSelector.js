@@ -13,8 +13,6 @@ function LanguageSelector({ className }) {
 	const intl = useIntl()
 	const locale = intl.locale !== 'en' ? intl.locale : ''
 
-	// console.log(`state: ${state.language}, locale: ${locale}`)
-
 	return (
 		<div className={className}>
 			{state.language === locale ? (
@@ -45,7 +43,7 @@ LanguageSelector.propTypes = {
 }
 
 export default styled(LanguageSelector)`
-	position: fixed;
+	/* position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -53,12 +51,12 @@ export default styled(LanguageSelector)`
 	left: 0;
 	width: 4rem;
 	height: 4rem;
-	z-index: 999;
-	/* position: fixed;
+	z-index: 999; */
+	position: fixed;
 	bottom: 0;
 	right: 0;
 	margin: 0.5rem;
-	z-index: 999; */
+	z-index: 999;
 
 	a {
 		cursor: pointer;

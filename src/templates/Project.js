@@ -10,16 +10,17 @@ import {
 	ProjectImage,
 	ProjectLinks,
 	ProjectTechs,
+	ProjectNav,
 } from '@components'
 
 const Project = ({ data, className }) => {
-	const { title, description, links, techstack } = data.projectsYaml
+	const { title, description, links, techstack, slug } = data.projectsYaml
 	const projectImages = data.projectImages.edges
 
 	return (
 		<Layout className={className}>
 			<SEO title={title} />
-			<article className={className}>
+			<article>
 				<header>
 					<h1>{title}</h1>
 					<div
@@ -37,6 +38,8 @@ const Project = ({ data, className }) => {
 					{techstack && <ProjectTechs techstack={techstack} />}
 				</footer>
 			</article>
+
+			<ProjectNav currentSlug={slug} />
 		</Layout>
 	)
 }
@@ -54,6 +57,14 @@ export default styled(Project)`
 	min-height: calc(100vh - 4rem);
 	width: 100%;
 
+	article {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
 	header {
 		max-width: 700px;
 		margin: 4rem 0;
@@ -67,6 +78,7 @@ export default styled(Project)`
 
 	.images {
 		width: 100%;
+		max-width: 980px;
 	}
 
 	.images > * {
@@ -83,7 +95,7 @@ export default styled(Project)`
 	/* Footer */
 	footer {
 		margin-top: -2rem;
-		margin-bottom: calc(var(--spacer) * 5);
+		margin-bottom: calc(var(--spacer) * 2);
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: calc(var(--spacer) * 2);
@@ -92,6 +104,7 @@ export default styled(Project)`
 	${media.medium`
 		footer {
 			grid-template-columns: 2fr 3fr;
+			margin-bottom: calc(var(--spacer) * 4);
 		}
 	`}
 `

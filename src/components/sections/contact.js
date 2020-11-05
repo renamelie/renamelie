@@ -16,7 +16,7 @@ const Contact = ({ className }) => {
 	return (
 		<Element name="#contact" id="contact">
 			<div className={className}>
-				<Title span="C" text="ontact" />
+				<Title>Contact</Title>
 				<Fade top duration={2000} delay={1000}>
 					<div className="content">
 						<div className="avatar">

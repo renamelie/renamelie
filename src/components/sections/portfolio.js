@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
-import { Title, Project } from '@components'
 import { Fade } from 'react-reveal'
 
+import { Title, Project } from '@components'
 import { media } from '@styles'
 
 const Portfolio = ({ className }) => {
@@ -34,7 +34,7 @@ const Portfolio = ({ className }) => {
 	return (
 		<Element name="#portfolio" id="portfolio">
 			<div className={className}>
-				<Title span="P" text="ortfolio" />
+				<Title>Portfolio</Title>
 				<div className="projects">
 					<Fade top duration={2000} delay={1000}>
 						{projects.map(({ node }, i) => (

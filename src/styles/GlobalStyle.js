@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --fz-heading: 32px;
+    --big-heading: clamp(40px, 8vw, 80px);
 
     --font-size-root: 18px;
     --font-size-base: 1rem;
@@ -59,7 +60,10 @@ const GlobalStyle = createGlobalStyle`
     --font-weight-headings: 400;
     --line-height-headings: 1.1;
 
-      /* Components spacing */
+    /* Sizes screen */
+    --maxWidth: 1600px;
+
+    /* Components spacing */
     --spacer: 1.5rem;
     --border-radius: 0.25rem;
 

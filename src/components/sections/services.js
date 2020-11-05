@@ -12,13 +12,8 @@ const Services = ({ className }) => {
 	return (
 		<Element name="#services" id="services">
 			<div className={className}>
-				<Title span="S" text="ervices" />
+				<Title>Services</Title>
 				<div className="listServices">
-					{/* {itemServices.map(({ icon, title, text }, i) => (
-						<Fade top key={i} duration={2000} delay={1000}>
-							<Item icon={icon} title={title} text={text} />
-						</Fade>
-					))} */}
 					{itemServices.map(({ icon, title, text }, i) => (
 						<Fade top key={i} duration={2000} delay={1000}>
 							<Item icon={icon} title={title} text={text} />

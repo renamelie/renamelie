@@ -1,13 +1,22 @@
 const path = require('path')
 
+const {
+	NODE_ENV,
+	URL: NETLIFY_SITE_URL = 'https://www.example.com',
+	DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+	CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 module.exports = {
 	siteMetadata: {
 		title: `Ren Amélie`,
-		name: `ren amelie`,
 		label: 'developer & freelance',
-		description: `Hello, Amélie, developer & freelance, nice to meet you.`,
-		author: `@renamelie`,
+		description: `Ren Amélie is a software engineer specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.`,
+		author: `@ren_amelie`,
 		siteUrl: `https://renamelie.com/`,
+		image: '/og.png',
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -77,11 +86,32 @@ module.exports = {
 			resolve: `gatsby-plugin-csp`,
 			options: {
 				directives: {
-					'style-src': `'self' 'unsafe-inline' 'sha256-WCK...jU='`,
+					'style-src': `'self' 'unsafe-inline'`,
 				},
 			},
 		},
-		'gatsby-plugin-robots-txt', // Create robots.txt // SEO
+		// Create robots.txt // SEO
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				resolveEnv: () => NETLIFY_ENV,
+				env: {
+					production: {
+						policy: [{ userAgent: '*' }],
+					},
+					'branch-deploy': {
+						policy: [{ userAgent: '*', disallow: ['/'] }],
+						sitemap: null,
+						host: null,
+					},
+					'deploy-preview': {
+						policy: [{ userAgent: '*', disallow: ['/'] }],
+						sitemap: null,
+						host: null,
+					},
+				},
+			},
+		},
 		`gatsby-plugin-sitemap`,
 		// 'gatsby-plugin-htaccess',
 		// this (optional) plugin enables Progressive Web App + Offline functionality

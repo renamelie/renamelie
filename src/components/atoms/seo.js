@@ -8,18 +8,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
+import { useLocation } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, title, meta }) {
+	const { pathname } = useLocation()
 	const intl = useIntl()
 	const { site } = useStaticQuery(
 		graphql`
 			query {
 				site {
 					siteMetadata {
-						title
-						description
+						defaultTitle: title
+						defaultDescription: description
+						defaultImage: image
 						author
 						label
 						siteUrl
@@ -29,43 +32,61 @@ function SEO({ description, lang, meta, title }) {
 		`
 	)
 
-	const metaDescription = description || site.siteMetadata.description
-	const defaultTitle = `${site.siteMetadata.title} { ${site.siteMetadata.label} }`
-	const language = intl.locale || lang
+	const {
+		defaultTitle,
+		defaultDescription,
+		defaultImage,
+		author,
+		label,
+		siteUrl,
+	} = site.siteMetadata
+
+	const seo = {
+		title: title
+			? `${title} || ${defaultTitle} { ${label} }`
+			: `${defaultTitle} { ${label} }`,
+		description: description || defaultDescription,
+		image: `${siteUrl}${defaultImage}`,
+		language: intl.locale || 'en',
+		url: `${siteUrl}${pathname}`,
+	}
 
 	return (
 		<Helmet
 			htmlAttributes={{
-				lang: language,
+				lang: seo.language,
 			}}
-			title={title || 'Home'}
-			titleTemplate={title ? `%s || ${defaultTitle}` : `${defaultTitle}`}
+			title={title}
+			defaultTitle={seo.title}
+			titleTemplate={`%s | ${defaultTitle} { ${label} }`}
 			meta={[
 				{
 					name: `description`,
-					content: metaDescription,
+					content: seo.description,
+				},
+				{
+					name: `image`,
+					content: seo.image,
 				},
 				{
 					property: `og:title`,
-					content: title,
+					content: seo.title,
 				},
 				{
 					property: `og:description`,
-					content: metaDescription,
+					content: seo.description,
+				},
+				{
+					property: `og:image`,
+					content: seo.image,
+				},
+				{
+					property: `og:url`,
+					content: seo.url,
 				},
 				{
 					property: `og:type`,
 					content: `website`,
-				},
-				{
-					property: `og:url`,
-					content: site.siteMetadata.siteUrl || `https://renamelie.com/`,
-				},
-				{
-					property: `og:image`,
-					content:
-						`https://avatars2.githubusercontent.com/u/60107273?s=460&u=514fee63df22a9b1fee334e4c1d9a72a8b5f3019&v=4` ||
-						'',
 				},
 				{
 					name: `twitter:card`,
@@ -73,32 +94,35 @@ function SEO({ description, lang, meta, title }) {
 				},
 				{
 					name: `twitter:creator`,
-					content: site.siteMetadata.author || ``,
+					content: author || ``,
 				},
 				{
 					name: `twitter:title`,
-					content: title,
+					content: seo.title,
 				},
 				{
 					name: `twitter:description`,
-					content: metaDescription,
+					content: seo.description,
+				},
+				{
+					name: `twitter:image`,
+					content: seo.image,
 				},
 			].concat(meta)}
 		/>
 	)
 }
 
-SEO.defaultProps = {
-	lang: `en`,
-	meta: [],
-	description: ``,
-}
-
 SEO.propTypes = {
 	description: PropTypes.string,
-	lang: PropTypes.string,
 	meta: PropTypes.arrayOf(PropTypes.object),
 	title: PropTypes.string,
+}
+
+SEO.defaultProps = {
+	description: null,
+	meta: [],
+	title: null,
 }
 
 export default SEO

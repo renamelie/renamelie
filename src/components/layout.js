@@ -39,7 +39,7 @@ Layout.propTypes = {
 export default styled(Layout)`
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1600px;
+	max-width: var(--maxWidth);
 	min-height: 100vh;
 	padding: 0 25px;
 

@@ -87,7 +87,7 @@ body {
 
 html {
   font-size: var(--font-size-root);
-  background: var(--box-background-color);
+  background: ${({ theme }) => theme.backgroundColor};
 }
 
 body {

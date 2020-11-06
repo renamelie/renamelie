@@ -82,14 +82,14 @@ module.exports = {
 		},
 		`gatsby-plugin-anchor-links`,
 		// Cross-Site Scripting // Secu
-		{
-			resolve: `gatsby-plugin-csp`,
-			options: {
-				directives: {
-					'style-src': `'self' 'unsafe-inline'`,
-				},
-			},
-		},
+		// {
+		// 	resolve: `gatsby-plugin-csp`,
+		// 	options: {
+		// 		directives: {
+		// 			'style-src': `'self' 'unsafe-inline'`,
+		// 		},
+		// 	},
+		// },
 		// Create robots.txt // SEO
 		{
 			resolve: 'gatsby-plugin-robots-txt',

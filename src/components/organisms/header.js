@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { useIntl } from 'gatsby-plugin-intl'
 
-import { CheckLocation } from '@components'
+import { CheckLocation, LanguageSelector } from '@components'
 import { navLinks } from '@config'
 import { colors, media } from '@styles'
 
@@ -43,17 +43,9 @@ const Header = ({ className }) => {
 					</li>
 				))}
 			</ul>
-			<div className="resume">
-				<span>
-					<a
-						href={intl.formatMessage({ id: 'resume' })}
-						target="_blank"
-						rel="noreferrer"
-					>
-						Resume
-					</a>
-				</span>
-			</div>
+			{/* <div className="lang">
+				<LanguageSelector />
+			</div> */}
 		</header>
 	)
 }
@@ -71,6 +63,19 @@ export default styled(Header)`
 	width: 100%;
 	z-index: 99;
 
+	/* .lang {
+		display: none;
+	}
+
+	${media.small`
+		.lang {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80px;
+		}
+	`} */
+
 	& ul {
 		display: flex;
 		justify-content: space-evenly;
@@ -78,25 +83,6 @@ export default styled(Header)`
 		list-style: none;
 		height: 100%;
 		width: 100%;
-	}
-
-	& .resume {
-		display: none;
-		justify-content: center;
-		align-items: center;
-		width: 120px;
-	}
-
-	& .resume span {
-		font-size: 12px;
-		border: 1px solid ${({ theme }) => theme.accentColor};
-		border-radius: 5px;
-		padding: 0.5rem 1rem;
-		cursor: pointer;
-	}
-
-	& .resume span a {
-		color: ${({ theme }) => theme.accentColor};
 	}
 
 	& li,
@@ -136,8 +122,14 @@ export default styled(Header)`
 	}
 
 	${media.small`
-		& ul {
-			width: auto;
+
+		ul {
+			justify-content: flex-end;
+			padding-right: 5rem;
+		}
+
+		li {
+			margin: 0 0.5rem;
 		}
 
 		& li span {
@@ -146,10 +138,6 @@ export default styled(Header)`
 
 		& li .sectionName {
 			display: block;
-		}
-
-		& .resume {
-			display: flex;
 		}
 	`}
 `

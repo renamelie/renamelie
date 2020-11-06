@@ -3,15 +3,18 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 import { Fade } from 'react-reveal'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import { Title, AboutText, AboutPic } from '@components'
 import { media } from '@styles'
 
 const About = ({ className }) => {
+	const intl = useIntl()
+
 	return (
 		<Element name="#about" id="about">
 			<div className={className}>
-				<Title>About me</Title>
+				<Title>{intl.formatMessage({ id: 'menuTitle.about' })}</Title>
 				<div className="inner">
 					<Fade duration={2000} delay={1000}>
 						<AboutText />

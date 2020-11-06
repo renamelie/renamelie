@@ -1,42 +1,46 @@
 {
-  "resume": "./resumeEN.pdf",
+  "menuTitle": {
+    "about": "About me",
+    "services": "Need help with your projects on the web ?",
+    "portfolio": "My Work",
+    "contact": "Contact"
+  },
 
-  "hello": "Hi, my name is",
-  "whatido": "I build things for the web.",
-  "whoami": "I'm a freelance web developer.",
-  "miniDescription": "I'm a software engineer based in Paris specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.",
+  "hero": {
+    "hello": "Hi, my name is",
+    "whatido": "I build things for the web.",
+    "miniDescription": "I'm a software engineer based in Paris specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.",
+    "miniServices": "Website creation, overhaul, custom development .. "
+  },
 
   "description" : {
     "p1": "Hello ! I’m Amélie, a software engineer based in Paris.",
-    "p2": "Passionate about everything related to web development and slightly manic, I attach great importance to developing clean and properly organized code.",
+    "p2": "Passionate about everything related to web development and and UI/UX Design, I attach great importance to developing clean and properly organized code.",
     "p3": "I enjoy creating things that live on the internet. My goal is to always build products that provide pixel-perfect, performant experiences.",
     "p4": "Here are a few technologies I've been working with recently :"
   },
 
-  "contact": "Interested in my work? I'm open to discuss ideas and professional opportunities. Drop me a direct email.",
+  "contact": {
+    "message": "Contact me to explain your project and see if I can help you !",
+    "button": "Get in touch"
+  },
 
-  "services1": {
-    "name": "Web projects",
-    "detail": "Showcase website, corporate, events, blog, e-commerce, portfolio."
-  },
-  "services2": {
-    "name": "Graphic design",
-    "detail": "Web templates, newsletters, emailings, business cards, advertising brochure .."
-  },
-  "services3": {
-    "name": "Web integration",
-    "detail": "Convert model to HTML/CSS."
-  },
-  "services4": {
-    "name": "Responsive web design",
-    "detail": "Compatible with all devices: mobiles, tablets, laptops and desktop."
-  },
-  "services5": {
-    "name": "Natural referencing",
-    "detail": "Web Accessibility and SEO."
-  },
-  "services6": {
-    "name": "Pages animations",
-    "detail": "Designed Web & Interactive Websites."
+  "services": {
+    "services1": {
+      "name": "Create of web projects",
+      "detail": "Showcase website, corporate, events, blog, e-commerce, portfolio."
+    },
+    "services2": {
+      "name": "Management of existing projects",
+      "detail": "Maintenance, additional features, code analysis, overhaul .."
+    },
+    "services3": {
+      "name": "Web integration",
+      "detail": "Convert model to HTML/CSS."
+    },
+    "services4": {
+      "name": "Natural referencing",
+      "detail": "Web Accessibility and SEO."
+    }
   }
 }

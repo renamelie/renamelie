@@ -4,11 +4,13 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
 import { Fade } from 'react-reveal'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import { Title, Project } from '@components'
 import { media } from '@styles'
 
 const Portfolio = ({ className }) => {
+	const intl = useIntl()
 	const data = useStaticQuery(graphql`
 		query {
 			allProjectsYaml {
@@ -34,7 +36,7 @@ const Portfolio = ({ className }) => {
 	return (
 		<Element name="#portfolio" id="portfolio">
 			<div className={className}>
-				<Title>Portfolio</Title>
+				<Title>{intl.formatMessage({ id: 'menuTitle.portfolio' })}</Title>
 				<div className="projects">
 					<Fade top duration={2000} delay={1000}>
 						{projects.map(({ node }, i) => (

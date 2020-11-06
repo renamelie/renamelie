@@ -18,14 +18,14 @@ const Hero = ({ className }) => {
 	}, [])
 
 	const items = [
-		<h1 key={0}>{intl.formatMessage({ id: 'hello' })}</h1>,
+		<h1 key={0}>{intl.formatMessage({ id: 'hero.hello' })}</h1>,
 		<h2 key={1} className="big-heading">
 			Ren Amélie.
 		</h2>,
 		<h3 key={2} className="medium-heading">
-			{intl.formatMessage({ id: 'whatido' })}
+			{intl.formatMessage({ id: 'hero.whatido' })}
 		</h3>,
-		<p key={3}>{intl.formatMessage({ id: 'miniDescription' })}</p>,
+		<p key={3}>{intl.formatMessage({ id: 'hero.miniServices' })}</p>,
 		<span key={4} className="contact">
 			<a href={`mailto:${email}`}>
 				<FaEnvelope />

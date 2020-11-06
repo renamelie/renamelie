@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { IconMoon, IconSun, IconExternal } from '@components/atoms/icons'
 
-import { CgGirl, CgWorkAlt } from 'react-icons/cg'
+import { CgGirl, CgWorkAlt, CgWebsite } from 'react-icons/cg'
 import { VscTools } from 'react-icons/vsc'
 import { HiOutlineMailOpen } from 'react-icons/hi'
 import {
@@ -62,6 +62,8 @@ const Icon = ({ name }) => {
 			return <FaHome />
 		case 'Compass':
 			return <FaRegCompass />
+		case 'CgWebsite':
+			return <CgWebsite />
 		default:
 			return <IconExternal />
 	}

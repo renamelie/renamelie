@@ -44,7 +44,7 @@ const StyledProject = styled.article`
 const Project = ({ node }) => {
 	const { slug, title, img } = node
 	const intl = useIntl()
-	const locale = intl.locale !== 'en' ? `/${intl.locale}` : ''
+	const locale = intl.locale !== 'fr' ? `/${intl.locale}` : ''
 
 	return (
 		<StyledProject>

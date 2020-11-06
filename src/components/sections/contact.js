@@ -16,7 +16,7 @@ const Contact = ({ className }) => {
 	return (
 		<Element name="#contact" id="contact">
 			<div className={className}>
-				<Title>Contact</Title>
+				<Title>{intl.formatMessage({ id: 'menuTitle.contact' })}</Title>
 				<Fade top duration={2000} delay={1000}>
 					<div className="content">
 						<div className="avatar">
@@ -24,9 +24,11 @@ const Contact = ({ className }) => {
 							<ReactTooltip id="1" className="tooltip" />
 						</div>
 
-						<p>{intl.formatMessage({ id: 'contact' })}</p>
+						<p>{intl.formatMessage({ id: 'contact.message' })}</p>
 
-						<a href={`mailto:${email}`}>Get in touch</a>
+						<a href={`mailto:${email}`}>
+							{intl.formatMessage({ id: 'contact.button' })}
+						</a>
 					</div>
 				</Fade>
 			</div>

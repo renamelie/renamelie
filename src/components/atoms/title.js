@@ -19,16 +19,18 @@ Title.propTypes = {
 }
 
 export default styled(Title)`
-	font-size: clamp(1.5rem, 5vw, 3rem);
+	font-size: clamp(1rem, 5vw, 1.8rem);
 	/* font-size: 2rem; */
 	font-weight: 300;
 	margin: 1rem 0;
 	text-transform: uppercase;
+	text-align: center;
+	word-spacing: 0.6rem;
 
 	&::first-letter {
-		font-size: clamp(3.5rem, 5vw, 5rem);
+		font-size: clamp(3rem, 5vw, 4rem);
 		/* font-size: 3rem; */
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 	${media.bigMedium`

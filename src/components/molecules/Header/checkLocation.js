@@ -7,7 +7,7 @@ import { Anchor } from '@components'
 
 const CheckLocation = ({ children, link }) => {
 	const intl = useIntl()
-	const locale = intl.locale !== 'en' ? intl.locale : ''
+	const locale = intl.locale !== 'fr' ? intl.locale : ''
 
 	return (
 		<>

@@ -5,7 +5,7 @@ export const GlobalStateContext = createContext()
 export const GlobalDispatchContext = createContext()
 
 const initialState = {
-	language: 'fr',
+	language: 'en',
 }
 
 function reducer(state, action) {
@@ -13,7 +13,7 @@ function reducer(state, action) {
 		case 'TOGGLE_LANGUAGE': {
 			return {
 				...state,
-				language: state.language === 'fr' ? 'en' : 'fr',
+				language: state.language === 'en' ? 'fr' : 'en',
 			}
 		}
 		default:

@@ -64,33 +64,23 @@ export const socialMedia = [
 
 export const itemServices = [
 	{
-		icon: <Icon name="FaTools" />,
-		title: 'services1.name',
-		text: 'services1.detail',
+		icon: <Icon name="CgWebsite" />,
+		title: 'services.services1.name',
+		text: 'services.services1.detail',
 	},
 	{
-		icon: <Icon name="FaPencilRuler" />,
-		title: 'services2.name',
-		text: 'services2.detail',
+		icon: <Icon name="FaTools" />,
+		title: 'services.services2.name',
+		text: 'services.services2.detail',
 	},
 	{
 		icon: <Icon name="FaCode" />,
-		title: 'services3.name',
-		text: 'services3.detail',
-	},
-	{
-		icon: <Icon name="FaLaptopCode" />,
-		title: 'services4.name',
-		text: 'services4.detail',
+		title: 'services.services3.name',
+		text: 'services.services3.detail',
 	},
 	{
 		icon: <Icon name="GiMagnifyingGlass" />,
-		title: 'services5.name',
-		text: 'services5.detail',
-	},
-	{
-		icon: <Icon name="FaAngellist" />,
-		title: 'services6.name',
-		text: 'services6.detail',
+		title: 'services.services4.name',
+		text: 'services.services4.detail',
 	},
 ]

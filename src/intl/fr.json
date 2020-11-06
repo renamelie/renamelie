@@ -1,42 +1,46 @@
 {
-  "resume": "./resumeFR.pdf",
+  "menuTitle": {
+    "about": "À propos de moi",
+    "services": "Besoin d'aide pour vos projets sur le web ?",
+    "portfolio": "Porfolio",
+    "contact": "Contact"
+  },
 
-  "hello": "Salut, moi c’est",
-  "whatido": "Je construis des choses pour le Web.",
-  "whoami": "Je suis développeur web en freelance.",
-  "miniDescription": "Je suis déloppeuse Web basée sur Paris spécialisée dans le développement (et parfois le design) de sites Web et d'applications.",
+  "hero": {
+    "hello": "Salut, moi c’est",
+    "whatido": "Je construis des choses pour le Web.",
+    "miniDescription": "Je suis déloppeuse Web basée sur Paris spécialisée dans le développement (et parfois le design) de sites Web et d'applications.",
+    "miniServices": "Création site internet, refonte, développement sur mesure .. "
+  },
 
   "description" : {
-    "p1": "Salut ! Moi, c’est Amélie. Je suis développeuse Front-End basée à Paris.",
-    "p2": "Passionnée depuis toute petite par l’univers du développement web et légèrement maniaque, je porte une grande importance à développer un code propre et correctement organisé.",
+    "p1": "Salut ! Moi, c’est Amélie. Je suis développeuse web Front-End en freelance basée à Paris.",
+    "p2": "Formée à l’école 42 et passionnée depuis toute petite par l’univers du développement web et d’UI/UX Design, je porte une grande importance à développer un code propre et correctement organisé.",
     "p3": "J’aime créer des choses qui vivent sur Internet. Mon objectif est de toujours créer des produits qui offrent des expériences au pixel près.",
     "p4": "Voici quelques technologies avec lesquelles j'ai travaillé récemment :"
   },
 
-  "contact": "Intéressé par mon travail ? Je suis ouverte à des opportunités de missions. Envoyez moi un mail !",
+  "contact": {
+    "message": "Prenez contact avec moi pour m'expliquer votre projet et voir si je peux vous aider !",
+    "button": "Parlez moi de votre projet"
+  },
 
-  "services1": {
-    "name": "Projets web",
-    "detail": "Site vitrine, corporate, évènementiel, blog, e-commerce, portfolio."
-  },
-  "services2": {
-    "name": "Conception graphique",
-    "detail": "Templates Web, newsletters, emailimgs, cartes de visite, plaquette publicitaires .."
-  },
-  "services3": {
-    "name": "Intégration web",
-    "detail": "Intégration HTML/CSS depuis une maquette en suivant les standards du web."
-  },
-  "services4": {
-    "name": "Responsive web design",
-    "detail": "Compatible tous supports: mobiles, tablettes, PC portables et desktop."
-  },
-  "services5": {
-    "name": "Référencement naturel",
-    "detail": "Affichage sémantique des informations pour un référencement optimal."
-  },
-  "services6": {
-    "name": "Animations des pages",
-    "detail": "Pages web interactives pour embellir votre projet."
+  "services": {
+    "services1": {
+      "name": "Création de projets web",
+      "detail": "Site vitrine, corporate, évènementiel, blog, e-commerce, portfolio."
+    },
+    "services2": {
+      "name": "Gestion des projets existants",
+      "detail": "Maintenance, fonctionnalités supplémentaires, analyse du code, refonte .."
+    },
+    "services3": {
+      "name": "Intégration web",
+      "detail": "Intégration HTML/CSS depuis une maquette en suivant les standards du web."
+    },
+    "services4": {
+      "name": "Référencement naturel",
+      "detail": "Affichage sémantique des informations pour un référencement optimal."
+    }
   }
 }

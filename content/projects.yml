@@ -2,9 +2,11 @@
   slug: /tgti/
   img: 'images/tgti-01.png'
   description: >
-    A reproduction of a template. If you are an association and you need help to making a website, contact me :)
-
-    If I am free at this time, I would be happy to help you!
+    Vous êtes une association et vous avez besoin d'aide pour réaliser un projet web ? Contactez-moi :)
+    Si je suis libre en ce moment, je serais heureux de vous aider !
+  descriptionEN: >
+    You are an association and you need help to making a website ? Contact me :)
+    If I am free at this time, I would be happy to help you !
   techstack:
     - Sketch
     - Gatsby
@@ -29,6 +31,9 @@
   slug: /backpack/
   img: images/backpack-01.png
   description: >
+    Un endroit pour les voyageurs.
+    En construction.
+  descriptionEN: >
     A place for travelers.
     Under construction.
   techstack:
@@ -53,8 +58,10 @@
   slug: '/cakeshop/'
   img: 'images/cakeshop-01.png'
   description: >
+    J'ai passé beaucoup de temps à jouer avec Gatsby ces derniers temps, mais une chose que je n'avais pas abordée était de créer une solution de commerce électronique. J'ai fait un peu de lecture et suis tombé sur Snipcart. Il semblait parfait pour mes besoins et dispose d'un environnement de test brillant, alors j'ai décidé de l'essayer.
+    J'ai créé un site e-commerce rapide en utilisant Gatsby avec DatoCMS et Snipcart.
+  descriptionEN: >
     I've been spending a lot of time playing around with Gatsby lately but one thing I hadn't tackled was making an e-commerce solution. I did a little reading around and came across Snipcart. It looked perfect for my needs and has a brilliant test environment so I decided to give it a go.
-
     I made a speedy e-commerce site using Gatsby with DatoCMS and Snipcart.
   links:
     - title: Link
@@ -79,8 +86,10 @@
   slug: /myinspiration/
   img: images/myinspiration-01.png
   description: >
-    TRAVEL WISH LIST!
-
+    Ma liste de voyage !
+    Il y a tellement d'endroits dans le monde que je veux voir et tellement de choses que je veux vivre. J'ai pensé que ce serait une bonne idée de compiler une liste, afin que je puisse les cocher une fois terminée 🙂 C'est ambitieux, mais j'y arriverai finalement…
+  descriptionEN: >
+    Travel wish list !
     There are SO many places in the world I want to see, and so many things I want to experience. I thought it would be a great idea to compile a list, so I can tick them off when completed 🙂 It’s ambitious, but I’ll get there eventually….
   links:
     - title: My inspiration
@@ -104,7 +113,9 @@
   slug: /retro/
   img: images/retro-01.png
   description: >
-    Retro Portfolio
+    Reproduction d'un Portfolio sur le thème Retro en React
+  descriptionEN: >
+    Reproduction of a Retro Portfolio in React
   links:
     - title: Github
       icon: Github
@@ -121,6 +132,8 @@
   slug: /car-wash/
   img: images/car-wash-01.png
   description: >
+    J'ai conçu le design d'une application de voiture
+  descriptionEN: >
     I designed a car wash app
   techstack:
     - Adobe XD
@@ -129,8 +142,10 @@
   slug: /coloc-appart/
   img: images/coloc-appart-01.png
   description: >
+    Coloc'Appart. Enfin des appartements conçus pour l'hébergement en colocation.
+    Refonte du site Web et ajout de nouvelles fonctionnalités.
+  descriptionEN: >
     Coloc'Appart. Finally, apartments designed for shared accommodation.
-
     Website redesign and adding new features.
   links:
     - title: Coloc'Appart

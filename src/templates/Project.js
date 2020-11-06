@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 
 import { media } from '@styles'
 import {
@@ -14,7 +15,16 @@ import {
 } from '@components'
 
 const Project = ({ data, className }) => {
-	const { title, description, links, techstack, slug } = data.projectsYaml
+	const intl = useIntl()
+	const locale = intl.locale !== 'fr' ? intl.locale : 'fr'
+	const {
+		title,
+		description,
+		descriptionEN,
+		links,
+		techstack,
+		slug,
+	} = data.projectsYaml
 	const projectImages = data.projectImages.edges
 
 	return (
@@ -24,8 +34,10 @@ const Project = ({ data, className }) => {
 				<header>
 					<h1>{title}</h1>
 					<div
-						className="desctiption"
-						dangerouslySetInnerHTML={{ __html: description }}
+						className="description"
+						dangerouslySetInnerHTML={{
+							__html: locale === 'fr' ? description : descriptionEN,
+						}}
 					></div>
 				</header>
 				<div className="images">
@@ -115,6 +127,7 @@ export const projectQuery = graphql`
 			title
 			slug
 			description
+			descriptionEN
 			techstack
 			links {
 				title

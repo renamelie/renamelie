@@ -75,7 +75,7 @@ module.exports = {
 				// Supported languages
 				languages: [`fr`, `en`],
 				// Default site language
-				defaultLanguage: `en`,
+				defaultLanguage: `fr`,
 				// Redirects to `/en` in the route `/`
 				redirect: false,
 			},

@@ -50,13 +50,15 @@ export default styled(LanguageSelector)`
 	z-index: 999;
 	height: 4rem;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	button {
 		color: ${({ theme }) => theme.textColor};
-		margin: 0 var(--smallMargin);
 		background-color: transparent;
 		border: none;
 		font-size: 12px;
-		width: 20px;
 		height: 30px;
 		cursor: pointer;
 		transition: 800ms;
@@ -71,12 +73,6 @@ export default styled(LanguageSelector)`
 		}
 	`}
 
-	${media.bigMedium`
-		button {
-			margin: 0 var(--bigMargin);
-		}
-	`}
-
 	button:hover {
 		color: ${({ theme }) => theme.accentColor};
 	}
@@ -87,8 +83,14 @@ export default styled(LanguageSelector)`
 		align-items: center;
 		cursor: pointer;
 		font-size: 12px;
-		width: 100%;
-		height: 100%;
+		width: 40px;
+		margin-right: var(--smallMargin);
 		transition: 800ms;
 	}
+
+	${media.bigMedium`
+		a {
+			margin-right: var(--bigMargin);
+		}
+	`}
 `

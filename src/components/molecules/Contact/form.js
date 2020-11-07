@@ -17,12 +17,14 @@ const Form = ({ className }) => {
 	return (
 		<form
 			className={className}
-			name="Contact Form"
+			name="ContactMe Form"
+			method="POST"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 			onSubmit={handleSubmit(onSubmit)}
+			action="/success"
 		>
-			<input type="hidden" name="form-name" value="Contact Form" />
+			<input type="hidden" name="form-name" value="ContactMe Form" />
 			<input type="hidden" name="bot-field" />
 			<div className="formGroup">
 				<label htmlFor="name">
@@ -104,7 +106,7 @@ export default styled(Form)`
 
 	textarea:focus,
 	input:focus {
-		box-shadow: 0 0 5px 2px ${({ theme }) => theme.boxBgColor};
+		box-shadow: 0 0 5px 2px ${({ theme }) => theme.accentColor};
 	}
 
 	textarea {

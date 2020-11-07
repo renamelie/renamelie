@@ -18,10 +18,11 @@ const Form = ({ className }) => {
 		<form
 			className={className}
 			name="Contact"
+			method="post"
+			action="/success"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 			// onSubmit={handleSubmit(onSubmit)}
-			action="/success"
 		>
 			<input type="hidden" name="form-name" value="Contact" />
 			<input type="hidden" name="bot-field" />

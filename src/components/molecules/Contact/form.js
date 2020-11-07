@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { useForm } from 'react-hook-form'
-import { useIntl } from 'gatsby-plugin-intl'
+// import { useForm } from 'react-hook-form'
+// import { useIntl } from 'gatsby-plugin-intl'
 
 import { pxToRem } from '@styles'
 
 const Form = ({ className }) => {
-	const intl = useIntl()
+	// const intl = useIntl()
 	// const { handleSubmit, register, errors } = useForm()
 	// const onSubmit = (data, e) => {
 	// 	console.log(JSON.stringify(data))

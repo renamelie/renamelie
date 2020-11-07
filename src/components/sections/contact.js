@@ -19,11 +19,11 @@ const Contact = ({ className }) => {
 					<Fade duration={2000} delay={1000}>
 						<Text />
 					</Fade>
-					<Fade duration={2000} delay={1500}>
+					{/* <Fade duration={2000} delay={1500}>
 						<div className="form">
 							<Form />
 						</div>
-					</Fade>
+					</Fade> */}
 				</div>
 			</div>
 		</Element>

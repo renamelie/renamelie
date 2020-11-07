@@ -52,7 +52,7 @@ export default styled(LanguageSelector)`
 
 	button {
 		color: ${({ theme }) => theme.textColor};
-		margin: 0.5rem 1rem;
+		margin: 0 var(--smallMargin);
 		background-color: transparent;
 		border: none;
 		font-size: 12px;
@@ -68,6 +68,12 @@ export default styled(LanguageSelector)`
 			width: 40px;
 			border: 1px solid ${({ theme }) => theme.accentColor};
 			border-radius: 5px;
+		}
+	`}
+
+	${media.bigMedium`
+		button {
+			margin: 0 var(--bigMargin);
 		}
 	`}
 

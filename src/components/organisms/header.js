@@ -1,15 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { useIntl } from 'gatsby-plugin-intl'
 
-import { CheckLocation, LanguageSelector } from '@components'
+import { CheckLocation, Logo } from '@components'
 import { navLinks } from '@config'
 import { colors, media } from '@styles'
 
 const Header = ({ className }) => {
 	const [navBackground, setNavBackground] = useState(false)
-	const intl = useIntl()
 	const navRef = useRef()
 	navRef.current = navBackground
 	useEffect(() => {
@@ -33,6 +31,7 @@ const Header = ({ className }) => {
 				transition: '1s ease',
 			}}
 		>
+			<Logo />
 			<ul>
 				{navLinks.map(({ id, name, icon }, i) => (
 					<li key={i}>
@@ -43,9 +42,6 @@ const Header = ({ className }) => {
 					</li>
 				))}
 			</ul>
-			{/* <div className="lang">
-				<LanguageSelector />
-			</div> */}
 		</header>
 	)
 }
@@ -62,19 +58,6 @@ export default styled(Header)`
 	height: 4rem;
 	width: 100%;
 	z-index: 99;
-
-	/* .lang {
-		display: none;
-	}
-
-	${media.small`
-		.lang {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 80px;
-		}
-	`} */
 
 	& ul {
 		display: flex;

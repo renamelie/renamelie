@@ -14,15 +14,10 @@
   },
 
   "description" : {
-    "p1": "Hello ! I’m Amélie, a software engineer based in Paris.",
+    "p1": "I’m a software engineer based in Paris.",
     "p2": "Passionate about everything related to web development and and UI/UX Design, I attach great importance to developing clean and properly organized code.",
     "p3": "I enjoy creating things that live on the internet. My goal is to always build products that provide pixel-perfect, performant experiences.",
     "p4": "Here are a few technologies I've been working with recently :"
-  },
-
-  "contact": {
-    "message": "Contact me to explain your project and see if I can help you !",
-    "button": "Get in touch"
   },
 
   "services": {
@@ -42,5 +37,15 @@
       "name": "Natural referencing",
       "detail": "Web Accessibility and SEO."
     }
+  },
+
+  "contact": {
+    "message": "Contact me to explain your project and see if I can help you !",
+    "button": "Get in touch",
+    "name": "Name",
+    "phone": "Phone",
+    "formMessage": "Your message",
+    "send": "SEND",
+    "required": "This field is required."
   }
 }

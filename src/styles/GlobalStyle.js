@@ -62,6 +62,8 @@ const GlobalStyle = createGlobalStyle`
 
     /* Sizes screen */
     --maxWidth: 1600px;
+    --smallMargin: 20px;
+    --bigMargin: 40px;
 
     /* Components spacing */
     --spacer: 1.5rem;

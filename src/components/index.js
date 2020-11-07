@@ -19,18 +19,16 @@ export { default as Side } from './molecules/Layout/side'
 export { default as Social } from './molecules/Layout/social'
 export { default as Email } from './molecules/Layout/email'
 export { default as LanguageSelector } from './molecules/Layout/languageSelector'
-
 export { default as Anchor } from './molecules/Header/anchor'
 export { default as CheckLocation } from './molecules/Header/checkLocation'
-
+export { default as Logo } from './molecules/Header/logo'
 export { default as ItemServices } from './molecules/Services/itemServices'
-
 export { default as Project } from './molecules/Portfolio/project'
-
 export { default as ProjectNav } from './molecules/ProjectNav/projectNav'
-
 export { default as ProjectLinks } from './molecules/ProjectTemplates/projectLinks'
 export { default as ProjectTechs } from './molecules/ProjectTemplates/projectTechs'
+export { default as Text } from './molecules/Contact/text'
+export { default as Form } from './molecules/Contact/form'
 
 export { default as SEO } from './atoms/seo'
 export { default as Icon } from './atoms/icons/icon'

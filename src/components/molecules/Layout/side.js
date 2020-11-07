@@ -41,8 +41,10 @@ export default styled(Side)`
 	color: var(--light-slate);
 	width: 40px;
 	bottom: 0;
-	left: ${props => (props.orientation === 'left' ? '20px' : 'auto')};
-	right: ${props => (props.orientation === 'left' ? 'auto' : '20px')};
+	left: ${props =>
+		props.orientation === 'left' ? 'var(--smallMargin)' : 'auto'};
+	right: ${props =>
+		props.orientation === 'left' ? 'auto' : 'var(--smallMargin)'};
 	z-index: 11;
 
 	${media.medium`
@@ -50,7 +52,9 @@ export default styled(Side)`
   `}
 
 	${media.bigMedium`
-    left: ${props => (props.orientation === 'left' ? '40px' : 'auto')};
-    right: ${props => (props.orientation === 'left' ? 'auto' : '40px')};
+    left: ${props =>
+			props.orientation === 'left' ? 'var(--bigMargin)' : 'auto'};
+    right: ${props =>
+			props.orientation === 'left' ? 'auto' : 'var(--bigMargin)'};
   `}
 `

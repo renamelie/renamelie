@@ -8,11 +8,11 @@ import { pxToRem } from '@styles'
 
 const Form = ({ className }) => {
 	const intl = useIntl()
-	const { handleSubmit, register, errors } = useForm()
-	const onSubmit = (data, e) => {
-		console.log(JSON.stringify(data))
-		e.target.submit()
-	}
+	// const { handleSubmit, register, errors } = useForm()
+	// const onSubmit = (data, e) => {
+	// 	console.log(JSON.stringify(data))
+	// 	e.target.submit()
+	// }
 
 	return (
 		<form
@@ -21,7 +21,7 @@ const Form = ({ className }) => {
 			method="POST"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
-			onSubmit={handleSubmit(onSubmit)}
+			// onSubmit={handleSubmit(onSubmit)}
 			action="/success"
 		>
 			<input type="hidden" name="form-name" value="ContactMe Form" />
@@ -32,12 +32,12 @@ const Form = ({ className }) => {
 						type="text"
 						placeholder={intl.formatMessage({ id: 'contact.name' })}
 						name="name"
-						ref={register({
-							required: intl.formatMessage({ id: 'contact.required' }),
-							maxLength: 80,
-						})}
+						// ref={register({
+						// 	required: intl.formatMessage({ id: 'contact.required' }),
+						// 	maxLength: 80,
+						// })}
 					/>
-					{errors.name && errors.name.message}
+					{/* {errors.name && errors.name.message} */}
 				</label>
 			</div>
 			<div className="formGroup">
@@ -46,16 +46,16 @@ const Form = ({ className }) => {
 						type="email"
 						placeholder="Email"
 						name="email"
-						ref={register({
-							required: intl.formatMessage({ id: 'contact.required' }),
-							maxLength: 80,
-							pattern: {
-								value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-								message: 'invalid email address',
-							},
-						})}
+						// ref={register({
+						// 	required: intl.formatMessage({ id: 'contact.required' }),
+						// 	maxLength: 80,
+						// 	pattern: {
+						// 		value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+						// 		message: 'invalid email address',
+						// 	},
+						// })}
 					/>
-					{errors.email && errors.email.message}
+					{/* {errors.email && errors.email.message} */}
 				</label>
 			</div>
 			<div className="formGroup">
@@ -64,25 +64,25 @@ const Form = ({ className }) => {
 						type="text"
 						placeholder={intl.formatMessage({ id: 'contact.phone' })}
 						name="phone"
-						ref={register({
-							required: intl.formatMessage({ id: 'contact.required' }),
-							minLength: 6,
-							maxLength: 12,
-						})}
+						// ref={register({
+						// 	required: intl.formatMessage({ id: 'contact.required' }),
+						// 	minLength: 6,
+						// 	maxLength: 12,
+						// })}
 					/>
-					{errors.phone && errors.phone.message}
+					{/* {errors.phone && errors.phone.message} */}
 				</label>
 			</div>
 			<div className="formGroup">
 				<label htmlFor="message">
 					<textarea
 						placeholder={intl.formatMessage({ id: 'contact.formMessage' })}
-						name="message"
-						ref={register({
-							required: intl.formatMessage({ id: 'contact.required' }),
-						})}
+						// name="message"
+						// ref={register({
+						// 	required: intl.formatMessage({ id: 'contact.required' }),
+						// })}
 					/>
-					{errors.message && errors.message.message}
+					{/* {errors.message && errors.message.message} */}
 				</label>
 			</div>
 			<div className="buttonForm">

@@ -50,7 +50,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -p 8001",
-    "push": "git add . && git commit -m 'fix' && git push",
+    "push": "git add . && git commit -m 'update' && git push",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

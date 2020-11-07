@@ -29,7 +29,8 @@ const Form = ({ className }) => {
 				<label htmlFor="name">
 					<input
 						type="text"
-						placeholder={intl.formatMessage({ id: 'contact.name' })}
+						placeholder="Name"
+						// placeholder={intl.formatMessage({ id: 'contact.name' })}
 						name="name"
 						// ref={register({
 						// 	required: intl.formatMessage({ id: 'contact.required' }),
@@ -61,7 +62,8 @@ const Form = ({ className }) => {
 				<label htmlFor="phone">
 					<input
 						type="text"
-						placeholder={intl.formatMessage({ id: 'contact.phone' })}
+						placeholder="Phone"
+						// placeholder={intl.formatMessage({ id: 'contact.phone' })}
 						name="phone"
 						// ref={register({
 						// 	required: intl.formatMessage({ id: 'contact.required' }),
@@ -75,7 +77,8 @@ const Form = ({ className }) => {
 			<div className="formGroup">
 				<label htmlFor="message">
 					<textarea
-						placeholder={intl.formatMessage({ id: 'contact.formMessage' })}
+						placeholder="Message"
+						// placeholder={intl.formatMessage({ id: 'contact.formMessage' })}
 						// name="message"
 						// ref={register({
 						// 	required: intl.formatMessage({ id: 'contact.required' }),
@@ -86,7 +89,8 @@ const Form = ({ className }) => {
 			</div>
 			<div className="buttonForm">
 				<button type="submit">
-					{intl.formatMessage({ id: 'contact.send' })}
+					Send
+					{/* {intl.formatMessage({ id: 'contact.send' })} */}
 				</button>
 			</div>
 		</form>

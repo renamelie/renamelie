@@ -3,10 +3,10 @@
   img: 'images/tgti-01.png'
   description: >
     Vous êtes une association et vous avez besoin d'aide pour réaliser un projet web ? Contactez-moi :)
-    Si je suis libre en ce moment, je serais heureux de vous aider !
+    Je serais heureux de vous aider !
   descriptionEN: >
     You are an association and you need help to making a website ? Contact me :)
-    If I am free at this time, I would be happy to help you !
+    I would be happy to help you !
   techstack:
     - Sketch
     - Gatsby

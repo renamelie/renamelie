@@ -50,6 +50,7 @@ export default styled(Services)`
 
 	.listServices > * {
 		transition: 0.5s;
+		display: flex;
 	}
 
 	${media.bigMedium`

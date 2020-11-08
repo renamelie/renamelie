@@ -46,7 +46,7 @@ const ThemeButton = ({ theme, toggleTheme }) => {
 	const isLight = theme === 'light'
 
 	return (
-		<ToggleContainer lightTheme={isLight} onClick={toggleTheme}>
+		<ToggleContainer lightTheme={!isLight} onClick={toggleTheme}>
 			<Icon name="Sun" />
 			<Icon name="Moon" />
 		</ToggleContainer>

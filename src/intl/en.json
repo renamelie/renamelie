@@ -31,11 +31,11 @@
     },
     "services3": {
       "name": "Web integration",
-      "detail": "Convert model to HTML/CSS."
+      "detail": "Convert model to HTML/CSS or React"
     },
     "services4": {
-      "name": "Natural referencing",
-      "detail": "Web Accessibility and SEO."
+      "name": "Responsive web design",
+      "detail": "Compatible with all devices: mobiles, tablets, laptops and desktop"
     }
   },
 

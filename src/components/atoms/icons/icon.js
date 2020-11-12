@@ -19,6 +19,7 @@ import {
 	FaAngellist,
 	FaHome,
 	FaRegCompass,
+	FaConnectdevelop,
 } from 'react-icons/fa'
 import { GiMagnifyingGlass } from 'react-icons/gi'
 
@@ -64,6 +65,8 @@ const Icon = ({ name }) => {
 			return <FaRegCompass />
 		case 'CgWebsite':
 			return <CgWebsite />
+		case 'FaConnectdevelop':
+			return <FaConnectdevelop />
 		default:
 			return <IconExternal />
 	}

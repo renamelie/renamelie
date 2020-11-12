@@ -79,7 +79,7 @@ export const itemServices = [
 		text: 'services.services3.detail',
 	},
 	{
-		icon: <Icon name="GiMagnifyingGlass" />,
+		icon: <Icon name="FaConnectdevelop" />,
 		title: 'services.services4.name',
 		text: 'services.services4.detail',
 	},

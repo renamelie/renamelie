@@ -7,7 +7,10 @@ const Success = ({ className }) => {
 	return (
 		<Layout>
 			<SEO title="Success" />
-			<div className={className}>Success !</div>
+			<div className={className}>
+				<h2>Merci !</h2>
+				<p>Votre formulaire a bien été envoyé.</p>
+			</div>
 		</Layout>
 	)
 }
@@ -19,6 +22,7 @@ Success.propTypes = {
 export default styled(Success)`
 	min-height: calc(100vh - 4rem);
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 `

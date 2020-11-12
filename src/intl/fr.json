@@ -31,11 +31,11 @@
     },
     "services3": {
       "name": "Intégration web",
-      "detail": "Intégration HTML/CSS depuis une maquette en suivant les standards du web."
+      "detail": "Intégration HTML/CSS (ou React) depuis une maquette en suivant les standards du web."
     },
     "services4": {
-      "name": "Référencement naturel",
-      "detail": "Affichage sémantique des informations pour un référencement optimal."
+      "name": "Responsive web design",
+      "detail": "Compatible tous supports: mobiles, tablettes, PC portables et desktop"
     }
   },
 

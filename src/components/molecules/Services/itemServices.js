@@ -5,8 +5,10 @@ import { media, pxToRem } from '@styles'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
 const StyledItem = styled.div`
+	flex: 1;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	flex-wrap: wrap;
 	margin: 1rem 0;
 	min-height: 90px;

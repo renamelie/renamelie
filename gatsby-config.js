@@ -11,7 +11,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
 	siteMetadata: {
-		title: `ren amelie`,
+		title: `Ren Amélie`,
 		label: 'developer & freelance',
 		description: `Ren Amélie is a software engineer specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.`,
 		author: `@ren_amelie`,
@@ -113,6 +113,7 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-sitemap`,
+		`gatsby-plugin-netlify`,
 		// 'gatsby-plugin-htaccess',
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline

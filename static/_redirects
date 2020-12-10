@@ -1,3 +1,6 @@
 https://renamelie.fr https://renamelie.com 301!
-https://www.renamelie.fr https://renamelie.com 301!
+https://www.renamelie.fr/* https://renamelie.com 301!
+https://www.renamelie.fr/en/* https://renamelie.com 301!
+
 https://renamelie.netlify.com/* https://renamelie.com/:splat 301!
+https://renamelie.netlify.app/en/* https://renamelie.com 301!
